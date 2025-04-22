@@ -1,0 +1,10 @@
+components_manager:
+  components:
+    handler-hello-sample:
+      path: /hello
+      method: GET
+    server:
+      listener:
+        port: 8080
+        handler-defaults:
+          task_processor: main-task-processor

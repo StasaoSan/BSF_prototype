@@ -1,0 +1,3 @@
+/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/BSF_prototype.dir
+/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/rebuild_cache.dir

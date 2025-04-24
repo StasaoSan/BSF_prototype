@@ -1,0 +1,13 @@
+{
+  "dnn": "internet",
+  "pcfIpEndPoints": [
+    {
+      "ipv4Address": "172.22.0.27",
+      "port": 7777
+    }
+  ],
+  "snssai": {
+    "sst": 1
+  },
+  "supi": "imsi-001011234567895"
+}

@@ -1,10 +1,31 @@
 components_manager:
+  task_processors:
+    main-task-processor:
+      worker_threads: 4
+    fs-task-processor:
+      worker_threads: 1
+
+  default_task_processor: main-task-processor
+
   components:
-    handler-hello-sample:
-      path: /hello
-      method: GET
+    logging:
+      fs-task-processor: fs-task-processor
+      loggers:
+        default:
+          file_path: '@stdout'
+          level: info
+          overflow_behavior: discard
+
+    tracer:
+      service-name: bsf_prototype
+
     server:
       listener:
+        address: 0.0.0.0
         port: 8080
-        handler-defaults:
-          task_processor: main-task-processor
+        task_processor: main-task-processor
+
+    handler-about:
+      path: /about
+      method: GET
+      task_processor: main-task-processor

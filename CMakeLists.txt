@@ -10,7 +10,14 @@ add_subdirectory(${USERVER_ROOT} ${CMAKE_BINARY_DIR}/userver-build)
 
 find_package(nlohmann_json REQUIRED)
 
+file(GLOB_RECURSE GENERATED_SOURCES "gen/model/*.cpp")
 add_executable(bsf_prototype main.cpp
-        PCF/PCF_dto.h
-        PCF/PCF_json_bridge.h)
+        ${GENERATED_SOURCES}
+        UUID/IUuidGenerator.h
+        UUID/UuidGenerator.cpp
+        PCF/InMemoryPcfBindingDao.h
+        PCF/IPcfBindingDao.h
+        PCF/InMemoryPcfBindingDao.cpp
+        UUID/UuidGenerator.h)
+
 target_link_libraries(bsf_prototype userver-core nlohmann_json::nlohmann_json)

@@ -1,13 +1,11 @@
 {
+  "supi": "imsi-1234567890",
+  "ipv4Addr": "177.192.0.1",
   "dnn": "internet",
   "pcfIpEndPoints": [
-    {
-      "ipv4Address": "172.22.0.27",
-      "port": 7777
-    }
+    { "ipv4Address": "172.22.0.27", "port": 7777 }
   ],
-  "snssai": {
-    "sst": 1
-  },
-  "supi": "imsi-001011234567895"
+  "snssai": { "sst": 1 },
+  "suppFeat": "2",
+  "pcfFqdn": "example.pcf.com"
 }

@@ -5,7 +5,7 @@
 #include <userver/server/handlers/http_handler_base.hpp>
 #include <userver/components/minimal_server_component_list.hpp>
 #include <userver/utils/daemon_run.hpp>
-#include "PCF/PCF_json_bridge.h"
+#include "gen/model/PcfBindingPatch.h"
 
 class AboutHandler final : public server::handlers::HttpHandlerBase {
 public:
@@ -29,17 +29,14 @@ int main() {
     std::string input((std::istreambuf_iterator<char>(in)),
                        std::istreambuf_iterator<char>());
     in.close();
+    org::openapitools::server::model::PcfBindingPatch patch;
+    patch.fromJsonString(input);
+    std::cout << "JSON to data parse" << std::endl;
+    std::cout << patch.getIpv4Addr() << std::endl;
+    std::cout << patch.getPcfFqdn() << std::endl << std::endl;
 
-    json j = json::parse(input);
-
-    PCF_dto dto = j.get<PCF_dto>();
-    std::cout << "parsing from JSON complete!" << std::endl;
-    std::cout << "Parsed SUPI: " << (dto.supi ? *dto.supi : "(none)") << std::endl;
-    std::cout << "DNN: " << dto.dnn << std::endl;
-    std::cout << "SST: " << dto.snssai.sst << std::endl;
-    std::cout << std::endl;
-    json out = dto;
-    std::cout << "parsing from raw data complete" <<std::endl;
-    std::cout << "Serialized JSON:\n" << out.dump(2) << std::endl;
+    std::cout << "data to JSON parse" << std::endl;
+    std::string data = patch.toJsonString(true);
+    std::cout << data << std::endl;
     return 0;
 }

@@ -1,12 +1,15 @@
 #pragma once
 #include <string>
 #include "IPcfBindingDao.h"
-#include "../UUID/UuidGenerator.h"
+#include "../../UUID/UuidGenerator.h"
 
 class InMemoryPcfBindingDao : public IPcfBindingDao {
 public:
     explicit InMemoryPcfBindingDao() { std::unique_ptr<IUuidGenerator> uuid_generator = std::make_unique<UuidGenerator>(); };
-    std::int64_t Register(org::openapitools::server::model::PcfBinding patch) override;
+
+    std::int64_t Register(org::openapitools::server::model::PcfBinding binding) override;
+
+    std::optional<org::openapitools::server::model::PcfBinding> FindByIpv4(std::string ipv4) override;
 
 private:
     std::unordered_map<std::string, std::int64_t> ipv4ToUuid;

@@ -30390,3 +30390,2614 @@ events:
       variable: "run_result_unused"
       cached: true
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "userver/cmake/SetupDebugInfoCompression.cmake:3 (try_compile)"
+      - "userver/cmake/SetupDebugInfoCompression.cmake:54 (setup_linker_debug_info_compression)"
+      - "userver/cmake/UserverSetupEnvironment.cmake:68 (include)"
+      - "userver/cmake/UserverSetupEnvironment.cmake:110 (_userver_setup_environment_impl)"
+      - "userver/CMakeLists.txt:178 (userver_setup_environment)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake"
+    buildResult:
+      variable: "LINKER_HAS_ZSTD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_f1318
+        [1/2] /usr/bin/c++   -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/cmTC_f1318.dir/empty.cpp.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/empty.cpp
+        [2/2] : && /usr/bin/c++  -Wl,--gc-sections    -Werror -gz=zstd CMakeFiles/cmTC_f1318.dir/empty.cpp.o -o cmTC_f1318   && :
+        
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:219 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_900e8
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_900e8.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_900e8.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_900e8.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:220 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_b3efc
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_b3efc.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_b3efc.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_b3efc.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:221 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_9cdf8
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_9cdf8.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_9cdf8.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_9cdf8.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:222 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_0fa42
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_0fa42.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_0fa42.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_0fa42.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:223 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_18cb1
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_18cb1.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_18cb1.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_18cb1.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:224 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_cc258
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_cc258.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_cc258.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_cc258.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:225 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_33ed2
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_33ed2.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_33ed2.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_33ed2.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:226 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_eedde
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_eedde.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_eedde.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_eedde.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:227 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_8d5f6
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_8d5f6.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_8d5f6.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_8d5f6.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "userver/cmake/SetupDebugInfoCompression.cmake:3 (try_compile)"
+      - "userver/cmake/SetupDebugInfoCompression.cmake:54 (setup_linker_debug_info_compression)"
+      - "userver/cmake/UserverSetupEnvironment.cmake:68 (include)"
+      - "userver/cmake/UserverSetupEnvironment.cmake:110 (_userver_setup_environment_impl)"
+      - "userver/CMakeLists.txt:178 (userver_setup_environment)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake"
+    buildResult:
+      variable: "LINKER_HAS_ZSTD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_1bcde
+        [1/2] /usr/bin/c++   -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/cmTC_1bcde.dir/empty.cpp.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/empty.cpp
+        [2/2] : && /usr/bin/c++  -Wl,--gc-sections    -Werror -gz=zstd CMakeFiles/cmTC_1bcde.dir/empty.cpp.o -o cmTC_1bcde   && :
+        
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:219 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_9efc3
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_9efc3.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_9efc3.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_9efc3.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:220 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_93217
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_93217.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_93217.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_93217.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:221 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_8298b
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_8298b.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_8298b.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_8298b.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:222 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_b9aa4
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_b9aa4.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_b9aa4.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_b9aa4.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:223 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_fc6e6
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_fc6e6.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_fc6e6.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_fc6e6.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:224 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_95913
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_95913.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_95913.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_95913.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:225 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_dc958
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_dc958.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_dc958.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_dc958.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:226 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_99d05
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_99d05.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_99d05.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_99d05.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:227 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_4575a
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_4575a.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_4575a.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_4575a.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "userver/cmake/SetupDebugInfoCompression.cmake:3 (try_compile)"
+      - "userver/cmake/SetupDebugInfoCompression.cmake:54 (setup_linker_debug_info_compression)"
+      - "userver/cmake/UserverSetupEnvironment.cmake:68 (include)"
+      - "userver/cmake/UserverSetupEnvironment.cmake:110 (_userver_setup_environment_impl)"
+      - "userver/CMakeLists.txt:178 (userver_setup_environment)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake"
+    buildResult:
+      variable: "LINKER_HAS_ZSTD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_d319b
+        [1/2] /usr/bin/c++   -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/cmTC_d319b.dir/empty.cpp.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/empty.cpp
+        [2/2] : && /usr/bin/c++  -Wl,--gc-sections    -Werror -gz=zstd CMakeFiles/cmTC_d319b.dir/empty.cpp.o -o cmTC_d319b   && :
+        
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:219 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_86707
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_86707.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_86707.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_86707.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:220 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_dac80
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_dac80.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_dac80.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_dac80.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:221 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_52bf9
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_52bf9.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_52bf9.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_52bf9.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:222 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_95da8
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_95da8.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_95da8.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_95da8.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:223 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_bf62b
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_bf62b.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_bf62b.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_bf62b.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:224 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_0fcbe
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_0fcbe.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_0fcbe.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_0fcbe.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:225 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_e8629
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_e8629.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_e8629.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_e8629.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:226 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_33996
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_33996.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_33996.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_33996.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:227 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_597fc
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_597fc.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_597fc.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_597fc.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "userver/cmake/SetupDebugInfoCompression.cmake:3 (try_compile)"
+      - "userver/cmake/SetupDebugInfoCompression.cmake:54 (setup_linker_debug_info_compression)"
+      - "userver/cmake/UserverSetupEnvironment.cmake:68 (include)"
+      - "userver/cmake/UserverSetupEnvironment.cmake:110 (_userver_setup_environment_impl)"
+      - "userver/CMakeLists.txt:178 (userver_setup_environment)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake"
+    buildResult:
+      variable: "LINKER_HAS_ZSTD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_35d69
+        [1/2] /usr/bin/c++   -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/cmTC_35d69.dir/empty.cpp.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/empty.cpp
+        [2/2] : && /usr/bin/c++  -Wl,--gc-sections    -Werror -gz=zstd CMakeFiles/cmTC_35d69.dir/empty.cpp.o -o cmTC_35d69   && :
+        
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:219 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_d9430
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_d9430.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_d9430.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_d9430.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:220 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_49914
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_49914.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_49914.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_49914.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:221 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_418aa
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_418aa.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_418aa.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_418aa.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:222 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_f9c92
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_f9c92.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_f9c92.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_f9c92.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:223 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_63e87
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_63e87.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_63e87.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_63e87.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:224 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_605bb
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_605bb.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_605bb.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_605bb.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:225 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_e13c8
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_e13c8.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_e13c8.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_e13c8.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:226 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_2bdf6
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_2bdf6.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_2bdf6.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_2bdf6.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:227 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_69175
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_69175.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_69175.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_69175.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "userver/cmake/SetupDebugInfoCompression.cmake:3 (try_compile)"
+      - "userver/cmake/SetupDebugInfoCompression.cmake:54 (setup_linker_debug_info_compression)"
+      - "userver/cmake/UserverSetupEnvironment.cmake:68 (include)"
+      - "userver/cmake/UserverSetupEnvironment.cmake:110 (_userver_setup_environment_impl)"
+      - "userver/CMakeLists.txt:178 (userver_setup_environment)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake"
+    buildResult:
+      variable: "LINKER_HAS_ZSTD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_de992
+        [1/2] /usr/bin/c++   -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/cmTC_de992.dir/empty.cpp.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/empty.cpp
+        [2/2] : && /usr/bin/c++  -Wl,--gc-sections    -Werror -gz=zstd CMakeFiles/cmTC_de992.dir/empty.cpp.o -o cmTC_de992   && :
+        
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:219 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_621c3
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_621c3.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_621c3.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_621c3.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:220 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_adf3d
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_adf3d.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_adf3d.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_adf3d.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:221 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_a91e7
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_a91e7.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_a91e7.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_a91e7.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:222 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_dbb35
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_dbb35.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_dbb35.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_dbb35.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:223 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_80118
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_80118.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_80118.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_80118.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:224 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_085f2
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_085f2.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_085f2.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_085f2.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:225 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_dc9d2
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_dc9d2.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_dc9d2.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_dc9d2.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:226 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_41672
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_41672.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_41672.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_41672.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:227 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_68463
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_68463.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_68463.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_68463.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "userver/cmake/SetupDebugInfoCompression.cmake:3 (try_compile)"
+      - "userver/cmake/SetupDebugInfoCompression.cmake:54 (setup_linker_debug_info_compression)"
+      - "userver/cmake/UserverSetupEnvironment.cmake:68 (include)"
+      - "userver/cmake/UserverSetupEnvironment.cmake:110 (_userver_setup_environment_impl)"
+      - "userver/CMakeLists.txt:178 (userver_setup_environment)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake"
+    buildResult:
+      variable: "LINKER_HAS_ZSTD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_2182a
+        [1/2] /usr/bin/c++   -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/cmTC_2182a.dir/empty.cpp.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/empty.cpp
+        [2/2] : && /usr/bin/c++  -Wl,--gc-sections    -Werror -gz=zstd CMakeFiles/cmTC_2182a.dir/empty.cpp.o -o cmTC_2182a   && :
+        
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:219 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_2063b
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_2063b.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_2063b.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_2063b.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:220 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_cde01
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_cde01.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_cde01.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_cde01.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:221 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_5b7f8
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_5b7f8.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_5b7f8.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_5b7f8.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:222 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_bd2be
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_bd2be.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_bd2be.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_bd2be.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:223 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_6be4c
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_6be4c.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_6be4c.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_6be4c.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:224 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_0e3b7
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_0e3b7.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_0e3b7.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_0e3b7.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:225 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_08b93
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_08b93.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_08b93.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_08b93.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:226 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_d6fa8
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_d6fa8.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_d6fa8.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_d6fa8.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:227 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_be96f
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_be96f.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_be96f.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_be96f.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "userver/cmake/SetupDebugInfoCompression.cmake:3 (try_compile)"
+      - "userver/cmake/SetupDebugInfoCompression.cmake:54 (setup_linker_debug_info_compression)"
+      - "userver/cmake/UserverSetupEnvironment.cmake:68 (include)"
+      - "userver/cmake/UserverSetupEnvironment.cmake:110 (_userver_setup_environment_impl)"
+      - "userver/CMakeLists.txt:178 (userver_setup_environment)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake"
+    buildResult:
+      variable: "LINKER_HAS_ZSTD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_46572
+        [1/2] /usr/bin/c++   -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/cmTC_46572.dir/empty.cpp.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/userver-build/empty.cpp
+        [2/2] : && /usr/bin/c++  -Wl,--gc-sections    -Werror -gz=zstd CMakeFiles/cmTC_46572.dir/empty.cpp.o -o cmTC_46572   && :
+        
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:219 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_14e06
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_14e06.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_14e06.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_14e06.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:220 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_aa976
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_aa976.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_aa976.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_aa976.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:221 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_c54b8
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_c54b8.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_c54b8.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_c54b8.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:222 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_08942
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_08942.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_08942.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_08942.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:223 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_9503d
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_9503d.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_9503d.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_9503d.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:224 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_36c03
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_36c03.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_36c03.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_36c03.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:225 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_ee104
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_ee104.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_ee104.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_ee104.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:226 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_c9dd7
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_c9dd7.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_c9dd7.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_c9dd7.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cmake/TargetArch.cmake:115 (try_run)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:191 (target_architecture)"
+      - "cmake-build-debug/_deps/cryptopp-cmake-src/cryptopp/CMakeLists.txt:227 (check_target_architecture)"
+    directories:
+      source: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+      binary: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -Wl,--gc-sections"
+      CMAKE_MODULE_PATH: "/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake;/home/tikhonov-a/CLionProjects/BSF_prototype/userver/cmake/modules;/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "1"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-src/cmake/ResetInitialCompilerOptions.cmake"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -v cmTC_b505d
+        [1/2] /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_b505d.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        FAILED: CMakeFiles/cmTC_b505d.dir/arch.c.o 
+        /usr/bin/cc   -fPIE -fdiagnostics-color=always -o CMakeFiles/cmTC_b505d.dir/arch.c.o -c /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:21:6: error: #error cmake_ARCH x86_64
+           21 |     #error cmake_ARCH x86_64
+              |      ^~~~~
+        /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/arch.c:33:2: error: #error cmake_ARCH unknown
+           33 | #error cmake_ARCH unknown
+              |  ^~~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+...

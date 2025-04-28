@@ -15,9 +15,14 @@ add_executable(bsf_prototype main.cpp
         ${GENERATED_SOURCES}
         UUID/IUuidGenerator.h
         UUID/UuidGenerator.cpp
-        PCF/InMemoryPcfBindingDao.h
-        PCF/IPcfBindingDao.h
-        PCF/InMemoryPcfBindingDao.cpp
-        UUID/UuidGenerator.h)
+        UUID/UuidGenerator.h
+        PCF/DAO/InMemoryPcfBindingDao.h
+        PCF/DAO/IPcfBindingDao.h
+        PCF/DAO/InMemoryPcfBindingDao.cpp
+        PCF/Handler/PcfBindingHandler.cpp
+        PCF/Service/PcfBindingService.cpp
+        PCF/Service/IPcfBindingService.h
+        PCF/Service/PcfBindingService.h
+        PCF/Handler/PcfBindingHandler.h)
 
 target_link_libraries(bsf_prototype userver-core nlohmann_json::nlohmann_json)

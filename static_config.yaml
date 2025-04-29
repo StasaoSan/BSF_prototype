@@ -25,7 +25,8 @@ components_manager:
         port: 8080
         task_processor: main-task-processor
 
-    handler-about:
-      path: /about
-      method: GET
+    pcf-binding-service: {}
+    pcf-binding-handler:
+      path: /nbsf-management/v1/PcfBindings
+      method: POST
       task_processor: main-task-processor

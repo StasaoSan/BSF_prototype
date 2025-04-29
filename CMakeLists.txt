@@ -23,6 +23,7 @@ add_executable(bsf_prototype main.cpp
         PCF/Service/PcfBindingService.cpp
         PCF/Service/IPcfBindingService.h
         PCF/Service/PcfBindingService.h
-        PCF/Handler/PcfBindingHandler.h)
+        PCF/Handler/PcfBindingHandler.h
+        PCF/Service/PcfBindingServiceComponent.h)
 
 target_link_libraries(bsf_prototype userver-core nlohmann_json::nlohmann_json)

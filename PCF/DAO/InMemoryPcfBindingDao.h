@@ -5,7 +5,12 @@
 
 class InMemoryPcfBindingDao : public IPcfBindingDao {
 public:
-    explicit InMemoryPcfBindingDao() { std::unique_ptr<IUuidGenerator> uuid_generator = std::make_unique<UuidGenerator>(); };
+    explicit InMemoryPcfBindingDao() {
+        std::unique_ptr<IUuidGenerator> uuid_generator = std::make_unique<UuidGenerator>();
+    };
+
+    explicit InMemoryPcfBindingDao(std::unique_ptr<IUuidGenerator> generator)
+        : uuidGenerator(std::move(generator)) {}
 
     std::int64_t Register(org::openapitools::server::model::PcfBinding binding) override;
 

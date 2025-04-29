@@ -1,8 +1,6 @@
 #include "PcfBindingService.h"
 #include<bits/stdc++.h>
-#include <boost/regex/v5/basic_regex.hpp>
-#include <boost/regex/v5/regex_fwd.hpp>
-#include <boost/regex/v5/regex_match.hpp>
+#include <boost/regex.hpp>
 
 PcfBindingService::PcfBindingService(const std::shared_ptr<IPcfBindingDao>& dao) {
     m_dao = dao;
@@ -13,7 +11,7 @@ int64_t PcfBindingService::Register(org::openapitools::server::model::PcfBinding
     return m_dao->Register(binding);
 }
 
-void PcfBindingService::Validate(const org::openapitools::server::model::PcfBinding& binding); {
+void PcfBindingService::Validate(const org::openapitools::server::model::PcfBinding& binding) {
     bool has_valid_address = false;
 
     if (!binding.getIpv4Addr().empty()) {
@@ -22,11 +20,11 @@ void PcfBindingService::Validate(const org::openapitools::server::model::PcfBind
         has_valid_address = true;
     }
 
-    if (!binding.getIpv6Prefix().toJsonString().empty()) {
-        if (!isValidIPv6(binding.getIpv6Prefix().toJsonString()))
-            throw std::invalid_argument("Invalid IPv6 prefix format");
-        has_valid_address = true;
-    }
+    // if (!binding.getIpv6Prefix().toJsonString().empty()) {
+    //     if (!isValidIPv6(binding.getIpv6Prefix().toJsonString()))
+    //         throw std::invalid_argument("Invalid IPv6 prefix format");
+    //     has_valid_address = true;
+    // }
 
     if (!binding.getMacAddr48().empty()) {
         if (!isValidMac(binding.getMacAddr48()))

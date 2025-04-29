@@ -1,7 +1,7 @@
 #pragma once
 #include "IUuidGenerator.h"
-
+#include <cstdint>
 class UuidGenerator : public IUuidGenerator {
 public:
-    int64_t Generate() override;
+    uint64_t Generate() override;
 };

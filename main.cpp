@@ -6,37 +6,22 @@
 #include <userver/components/minimal_server_component_list.hpp>
 #include <userver/utils/daemon_run.hpp>
 #include "gen/model/PcfBindingPatch.h"
+#include "UUID/UuidGenerator.h"
+#include "PCF/DAO/InMemoryPcfBindingDao.h"
+#include "PCF/Handler/PcfBindingHandler.h"
+#include "PCF/Service/PcfBindingService.h"
+#include "PCF/Service/PcfBindingServiceComponent.h"
+#include "userver/logging/component.hpp"
+#include "userver/server/component.hpp"
+#include "userver/tracing/component.hpp"
 
-class AboutHandler final : public server::handlers::HttpHandlerBase {
-public:
-    static constexpr std::string_view kName = "handler-about";
-    using HttpHandlerBase::HttpHandlerBase;
+int main(int argc, char* argv[]) {
+    auto component_list = userver::components::MinimalServerComponentList();
+    component_list.Append<PcfBindingServiceComponent>();
+    component_list.Append<PcfBindingHandler>();
 
-    std::string HandleRequestThrow(const server::http::HttpRequest&,
-                                   server::request::RequestContext&) const override {
-        return "Hello World! I am a new BSF node!";
-    }
-};
+    auto dao = std::make_shared<InMemoryPcfBindingDao>(std::make_unique<UuidGenerator>());
+    auto service = std::make_shared<PcfBindingService>(dao);
 
-int main() {
-    std::string file = "../data.json";
-    std::ifstream in(file);
-    if (!in.is_open()) {
-        std::cout << "Не удалось открыть файл!" << std::endl;
-        return 1;
-    }
-
-    std::string input((std::istreambuf_iterator<char>(in)),
-                       std::istreambuf_iterator<char>());
-    in.close();
-    org::openapitools::server::model::PcfBindingPatch patch;
-    patch.fromJsonString(input);
-    std::cout << "JSON to data parse" << std::endl;
-    std::cout << patch.getIpv4Addr() << std::endl;
-    std::cout << patch.getPcfFqdn() << std::endl << std::endl;
-
-    std::cout << "data to JSON parse" << std::endl;
-    std::string data = patch.toJsonString(true);
-    std::cout << data << std::endl;
-    return 0;
+    return userver::utils::DaemonMain(argc, argv, component_list);
 }

@@ -28,5 +28,5 @@ components_manager:
     pcf-binding-service: {}
     pcf-binding-handler:
       path: /nbsf-management/v1/PcfBindings
-      method: POST
+      method: GET,POST
       task_processor: main-task-processor

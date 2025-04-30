@@ -11,6 +11,14 @@ int64_t PcfBindingService::Register(org::openapitools::server::model::PcfBinding
     return m_dao->Register(binding);
 }
 
+std::optional<org::openapitools::server::model::PcfBinding> PcfBindingService::FindByIpv4(std::string ipv4) {
+    return m_dao->FindByIpv4(ipv4);
+}
+
+std::optional<org::openapitools::server::model::PcfBinding> PcfBindingService::FindByMac(std::string mac) {
+    return m_dao->FindByMac(mac);
+}
+
 void PcfBindingService::Validate(const org::openapitools::server::model::PcfBinding& binding) {
     bool has_valid_address = false;
 
@@ -57,12 +65,12 @@ bool PcfBindingService::isValidIPv4(const std::string &ipv4){
     return boost::regex_match(ipv4, pattern);
 }
 
-// bool PcfBindingService::isValidIPv6(const std::string& ipv6) {
-//     static const boost::regex pattern(
-//             R"(^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$)"
-//         );
-//     return boost::regex_match(ipv6, pattern);
-// }
+bool PcfBindingService::isValidIPv6(const std::string& ipv6) {
+    static const boost::regex pattern(
+            R"(^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$)"
+        );
+    return boost::regex_match(ipv6, pattern);
+}
 
 bool PcfBindingService::isValidMac(const std::string& mac) {
     const boost::regex pattern(

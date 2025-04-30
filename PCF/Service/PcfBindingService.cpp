@@ -20,9 +20,17 @@ void PcfBindingService::Validate(const org::openapitools::server::model::PcfBind
         has_valid_address = true;
     }
 
-    // if (!binding.getIpv6Prefix().toJsonString().empty()) {
-    //     if (!isValidIPv6(binding.getIpv6Prefix().toJsonString()))
-    //         throw std::invalid_argument("Invalid IPv6 prefix format");
+    // IPv6Prefix.h ??? hasnt storage for ipv6...
+    // if need work with ipv6: also need validation here:
+    // now ipv6 just ignore
+    //
+    // const auto &pt =  binding.getIpv6Prefix().toPropertyTree();
+    // const auto &ipv6 = pt.get_value<std::string>();
+    //
+    // if (!ipv6.empty()) {
+    //     if (!isValidIPv6(ipv6)) {
+    //         throw std::invalid_argument("Invalid IPv6 address format");
+    //     }
     //     has_valid_address = true;
     // }
 
@@ -49,12 +57,12 @@ bool PcfBindingService::isValidIPv4(const std::string &ipv4){
     return boost::regex_match(ipv4, pattern);
 }
 
-bool PcfBindingService::isValidIPv6(const std::string& ipv6) {
-    static const boost::regex pattern(
-            R"(^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$)"
-        );
-    return boost::regex_match(ipv6, pattern);
-}
+// bool PcfBindingService::isValidIPv6(const std::string& ipv6) {
+//     static const boost::regex pattern(
+//             R"(^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$)"
+//         );
+//     return boost::regex_match(ipv6, pattern);
+// }
 
 bool PcfBindingService::isValidMac(const std::string& mac) {
     const boost::regex pattern(

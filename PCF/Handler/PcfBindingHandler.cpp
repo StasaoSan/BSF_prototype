@@ -7,13 +7,6 @@
 #include "userver/components/component_context.hpp"
 #include "../Service/PcfBindingServiceComponent.h"
 
-// PcfBindingHandler::PcfBindingHandler(
-//     const userver::components::ComponentConfig& config,
-//     const userver::components::ComponentContext& context)
-//     : HttpHandlerBase(config, context),
-//         m_service(context.FindComponent<std::shared_ptr<IPcfBindingService>>("pcf-binding-service"))
-// {}
-
 PcfBindingHandler::PcfBindingHandler(
 const userver::components::ComponentConfig& config,
 const userver::components::ComponentContext& context)
@@ -38,10 +31,10 @@ const {
         response["uuid"] = uuid;
 
         request.GetHttpResponse().SetStatus(userver::server::http::HttpStatus::kCreated); // created 200
+
         request.GetHttpResponse().SetHeader(
             std::string("Location"),
-            "/nbsf-management/v1/pcfBindings/" + std::to_string(uuid));
-
+            "http://" + request.GetHeader("Host") + "/nbsf-management/v1/pcfBindings/" + std::to_string(uuid));
         return  binding.toJsonString(true); // json request. Can add uuid via: userver::formats::json::ToString(response.ExtractValue())
     } catch (const std::invalid_argument &e) { // validation error 400
         userver::formats::json::ValueBuilder error;

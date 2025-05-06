@@ -1,11 +1,11 @@
 #pragma once
 
-#include <userver/components/component_list.hpp>
-#include <userver/server/handlers/http_handler_base.hpp>
+#include "userver/components/component_list.hpp"
+#include "userver/server/handlers/http_handler_base.hpp"
 
 // Note: this is for the purposes of tests/samples only
 #include <string_view>
-#include <userver/utest/using_namespace_userver.hpp>
+#include "userver/utest/using_namespace_userver.hpp"
 
 namespace samples::hello {
 

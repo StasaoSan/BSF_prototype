@@ -27,6 +27,16 @@ components_manager:
 
     pcf-binding-service: {}
     pcf-binding-handler:
+<<<<<<< Updated upstream
       path: /nbsf-management/v1/PcfBindings
+=======
+      path: /nbsf-management/v1/pcfBindings
+      method: GET,POST
+      task_processor: main-task-processor
+
+    pcf-ue-binding-service: {}
+    pcf-ue-binding-handler:
+      path: /nbsf-management/v1/pcf-ue-bindings
+>>>>>>> Stashed changes
       method: GET,POST
       task_processor: main-task-processor

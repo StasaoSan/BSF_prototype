@@ -10,6 +10,10 @@ int64_t PcfBindingService::Register(org::openapitools::server::model::PcfBinding
     return m_dao->Register(binding);
 }
 
+bool PcfBindingService::Delete(std::uint64_t uuid) {
+    return m_dao->Delete(uuid);
+}
+
 std::optional<org::openapitools::server::model::PcfBinding> PcfBindingService::FindByIpv4(std::string ipv4) {
     return m_dao->FindByIpv4(ipv4);
 }

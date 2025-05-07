@@ -53,7 +53,31 @@ const {
                 return R"({"error": "UE Address required (ipv4Addr or macAddr48"}
             )";
         }
+        if (request.GetMethod() == userver::server::http::HttpMethod::kDelete) {
+            const std::string& path = request.GetUrl();
+            const auto pos = path.find_last_of('/');
+            if (pos == std::string::npos || pos + 1 >= path.size()) {
+                request.GetHttpResponse().SetStatus(userver::server::http::HttpStatus::kBadRequest);
+                return R"({"error":"bindingId required"})";
+            }
 
+            const std::string id_str = path.substr(pos + 1);
+            std::uint64_t id{};
+            try {
+                id = std::stoull(id_str);
+            } catch (...) {
+                request.GetHttpResponse().SetStatus(userver::server::http::HttpStatus::kBadRequest);
+                return R"({"error":"bindingId must be uint64"})";
+            }
+
+            if (m_service->Delete(id)) {
+                request.GetHttpResponse().SetStatus(userver::server::http::HttpStatus::kNoContent);
+                return {};
+            } else {
+                request.GetHttpResponse().SetStatus(userver::server::http::HttpStatus::kNotFound);
+                return {};
+            }
+        }
         if (!binding_opt.has_value()) {
             request.GetHttpResponse().SetStatus(userver::server::http::HttpStatus::kNotFound);
             return "";

@@ -1,10 +1,10 @@
-#include "PcfUeBindingHandler.h"
+#include "PcfUeBindingBaseHandler.h"
 #include "../../Service/PcfUeBinding/IPcfUeBindingService.h"
 #include "../../Service/PcfUeBinding/PcfUeBindingServiceComponent.h"
 
 #include "userver/components/component_context.hpp"
 
-PcfUeBindingHandler::PcfUeBindingHandler(
+PcfUeBindingBaseHandler::PcfUeBindingBaseHandler(
         const userver::components::ComponentConfig& config,
         const userver::components::ComponentContext& context
 ) : HttpHandlerBase(config, context) {
@@ -12,7 +12,7 @@ PcfUeBindingHandler::PcfUeBindingHandler(
     m_service = service_component.GetService();
 }
 
-std::string PcfUeBindingHandler::HandleRequestThrow(
+std::string PcfUeBindingBaseHandler::HandleRequestThrow(
         const userver::server::http::HttpRequest& request,
         userver::server::request::RequestContext&
 ) const {

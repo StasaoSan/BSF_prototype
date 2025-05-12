@@ -179,6 +179,6 @@ CMake Deprecation Warning at cmake-build-debug/_deps/c-ares-src/CMakeLists.txt:1
 --  * USERVER_FEATURE_ROCKS
 --  * USERVER_FEATURE_S3API
 --  * USERVER_FEATURE_YDB
--- Configuring done (2.5s)
--- Generating done (0.3s)
+-- Configuring done (1.7s)
+-- Generating done (0.1s)
 -- Build files have been written to: /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug

@@ -1,0 +1,50 @@
+1. pcf binding
+    - POST
+        case 1:
+            vaild POST (ipv4Addr) -> 201 Created (in headers can find URI with link and UUID)
+        case 2:
+            vaild POST (macAddr48) -> 201 Created (in headers can find URI with link and UUID)
+        case 3:
+            POST (ipv6Addr) -> 400 Bad Request (ipv6 is not supported yet)
+        case 4:
+            empty UE* fleet (others fleet exist) -> 400 Bad Request
+        case 5:
+            valid post with ipv4/mac which is exist -> 201 Created
+        case 6:
+            post with empty body -> 400 Bad Request
+    - GET
+        case 1:
+            valid GET (ipv4Addr) -> 200 OK, JSON in response
+        case 2:
+            valid GET (macAddr48) -> 200 OK, JSON in response
+        case 3:
+            GET (ipv6Addr) -> 400 Bad Request, because UE* not exist
+        case 4:
+            GET (ipv4 + some additional params**)
+
+    - DELETE
+
+
+2. pcf ue binding
+    - POST
+
+    - GET
+
+
+    - DELETE
+
+
+
+
+
+some main info:
+pcf link: localhost:8080/nbsf-management/v1/pcfBindings
+ex body pcf post: {"supi":"imsi-001011234567895","ipv4Addr":"192.168.100.2","macAddr48":"02:da:a3:0d:86:80","dnn":"internet","pcfIpEndPoints":[{"ipv4Address":"172.22.0.27","port":7777}],"snssai":{"sst":1,"sd":12345},"suppFeat":"2"}
+
+pcf ue link: localhost:8080/nbsf-management/v1/pcf-ue-bindings
+ex body pcf ue post: {"supi": "imsi-012345678901234","gpsi": "gpsi-228","pcfForUeFqdn": "aaa://192.168.0.1:1488"}
+
+* UE - its ipv4Addr, or macAddr48, or ipv6Adrr, but last (ipv6) not supported yet, and so UE is ipv4 and mac
+
+** additional params for GET PCF binding is: supi (or gpsi) (only one at one time, not both), dnn (optionally snssai (sst and sd) (if dnn exist)
+

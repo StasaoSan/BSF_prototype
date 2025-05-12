@@ -1,17 +1,21 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.20)
 project(bsf_prototype LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+list(PREPEND CMAKE_PREFIX_PATH "/opt/homebrew")
+
 set(USERVER_ROOT "${CMAKE_SOURCE_DIR}/userver")
-set(Boost_DIR "")
 add_subdirectory(${USERVER_ROOT} ${CMAKE_BINARY_DIR}/userver-build)
 
 find_package(nlohmann_json REQUIRED)
 
-file(GLOB_RECURSE GENERATED_SOURCES "gen/model/*.cpp")
-add_executable(bsf_prototype main.cpp
+file(GLOB_RECURSE GENERATED_SOURCES CONFIGURE_DEPENDS
+        "${CMAKE_SOURCE_DIR}/gen/model/*.cpp")
+
+add_executable(BSF2
+        main.cpp
         ${GENERATED_SOURCES}
         UUID/IUuidGenerator.h
         UUID/UuidGenerator.cpp
@@ -48,4 +52,13 @@ add_executable(bsf_prototype main.cpp
         PCF/Handler/PcfUeBinding/Post/PcfUeBindingPostHandler.cpp
 )
 
-target_link_libraries(bsf_prototype userver-core nlohmann_json::nlohmann_json)
+target_link_libraries(BSF2
+        PRIVATE
+        userver-core
+        nlohmann_json::nlohmann_json
+)
+
+set_target_properties(BSF2 PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
+        VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
+)

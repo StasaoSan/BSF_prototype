@@ -11,6 +11,10 @@ bool PcfUeBindingService::Delete(std::uint64_t uuid) {
     return m_dao->Delete(uuid);
 }
 
+bool PcfUeBindingService::Exist(const org::openapitools::server::model::PcfForUeBinding &binding) {
+    return m_dao->Exist(binding);
+}
+
 std::vector<org::openapitools::server::model::PcfForUeBinding>
 PcfUeBindingService::FindByGpsi(const std::string &gpsi) const {
     return m_dao->FindByGpsi(gpsi);

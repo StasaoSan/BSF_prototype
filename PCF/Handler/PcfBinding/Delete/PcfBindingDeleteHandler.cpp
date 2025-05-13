@@ -13,14 +13,12 @@ std::string PcfBindingDeleteHandler::HandleRequestThrow( const userver::server::
             return R"({"error":"Method not allowed"})";
         }
 
-        const std::string& path = request.GetUrl();
-        const auto pos = path.find_last_of('/');
-        if (pos == std::string::npos || pos + 1 >= path.size()) {
+        if (!request.HasPathArg("bindingId")) {
             request.GetHttpResponse().SetStatus(userver::server::http::HttpStatus::kBadRequest);
             return R"({"error":"bindingId required"})";
         }
 
-        const std::string id_str = path.substr(pos + 1);
+        const auto& id_str = request.GetPathArg("bindingId");
         std::uint64_t id{};
         try {
             id = std::stoull(id_str);
@@ -34,11 +32,9 @@ std::string PcfBindingDeleteHandler::HandleRequestThrow( const userver::server::
         if (deleted) {
             request.GetHttpResponse().SetStatus(userver::server::http::HttpStatus::kNoContent);
             return {};  // 204 No Content
-        } else {
-            request.GetHttpResponse().SetStatus(userver::server::http::HttpStatus::kNotFound);
-            return R"({"error":"bindingId not found"})";
         }
-
+        request.GetHttpResponse().SetStatus(userver::server::http::HttpStatus::kNotFound);
+        return R"({"error":"bindingId not found"})";
     } catch (const std::invalid_argument& e) {
         userver::formats::json::ValueBuilder error;
         error["message"] = e.what();

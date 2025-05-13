@@ -25,6 +25,15 @@ std::string PcfBindingPostHandler::HandleRequestThrow(
             throw userver::server::handlers::RequestParseError(error.ExtractValue());
         }
 
+        if (m_service->Exist(binding)) { // 403 Forbidden
+            userver::formats::json::ValueBuilder error;
+            error["error"] = "EXISTING_BINDING_INFO_FOUND";
+
+            throw userver::server::handlers::CustomHandlerException(
+                userver::server::handlers::HandlerErrorCode::kForbidden,
+                error.ExtractValue());
+        }
+
         const auto uuid = m_service->Register(binding);
         const std::string location = "http://" + request.GetHeader("Host") + "/nbsf-management/v1/pcfBindings/" + std::to_string(uuid);
 

@@ -23,6 +23,25 @@ bool InMemoryPcfUeBindingDao::Delete(std::uint64_t uuid) {
     return true;
 }
 
+bool InMemoryPcfUeBindingDao::Exist(const org::openapitools::server::model::PcfForUeBinding &binding) const {
+    const auto& supi = binding.getSupi();
+    const auto& fqdn = binding.getPcfForUeFqdn();
+    if (supi.empty() || fqdn.empty())
+        return false;
+
+    auto it = supiToUuid.find(supi);
+    if (it == supiToUuid.end())
+        return false;
+
+    for (const auto& uuid : it->second) {
+        auto bindingIt = uuidToBinding.find(uuid);
+        if (bindingIt != uuidToBinding.end())
+            if (bindingIt->second.getPcfForUeFqdn() == fqdn)
+                return true;
+    }
+    return false;
+}
+
 std::vector<org::openapitools::server::model::PcfForUeBinding> InMemoryPcfUeBindingDao::FindBySupi(const std::string& supi) const {
     return FindThroughtMap(supiToUuid, supi, uuidToBinding);
 }

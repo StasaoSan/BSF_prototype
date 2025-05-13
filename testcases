@@ -9,7 +9,7 @@
         case 4:
             empty UE* fleet (others fleet exist) -> 400 Bad Request
         case 5:
-            valid post with ipv4/mac which is exist -> 201 Created
+            valid post with ipv4/mac which is exist -> 403 Forbidden (see pt 5.7 in 3GPP docs)
         case 6:
             post with empty body -> 400 Bad Request
     - GET
@@ -20,18 +20,54 @@
         case 3:
             GET (ipv6Addr) -> 400 Bad Request, because UE* not exist
         case 4:
-            GET (ipv4 + some additional params**)
-
+            GET (ipv4 + some RIGHT additional params**) -> 200 OK, JSON in responce
+        case 5:
+            GET (ipv4 + some INCORRECT additional params) -> 204 No Content
+        case 6:
+            GET (macAddr48 + some INCORRECT additional params) -> 204 No Content
+        case 7:
+            GET (ipv4, but in data layer has not one info) -> 400 Bad Request (multiple binding info found, (see pt 5.7 in 3GPP docs))
     - DELETE
-
+        case 1:
+            valid DELETE -> 204 No Content
+        case 2:
+            DELETE (incorrect UUID) -> 404 Not Found
+        case 3:
+            DELETE (empty link) -> 400 Bad Request
+        case 4:
+            DELETE (incorrect type UUID (ex - text)) -> 400 Bad Request
 
 2. pcf ue binding
     - POST
-
+        case 1:
+            valid POST -> 201 Created, JSON in response
+        case 2:
+            empty UE* fleet (others fleet exist) -> 400 Bad Request
+        case 3:
+            valid post with supi which is exist -> 400 Bad Request (see pt 5.7 in 3GPP docs)
+        case 4:
+            post with empty body -> 403 Forbidden
     - GET
-
+        case 1:
+            valid GET (supi) -> 200 OK, json in responce
+        case 2:
+            valid GET (gpsi) -> 200 OK, json in responce
+        case 3:
+            GET (incorrect supi) -> 200 OK + empty json ("[]")
+        case 4:
+            GET (incorrect gpsi) -> 200 OK + empty json ("[]")
+        case 5:
+            GET (ipv4, but in data layer has not one info) -> 400 Bad Request (multiple binding info found, (see pt 5.7 in 3GPP docs))
 
     - DELETE
+        case 1:
+            valid DELETE -> 204 No Content
+        case 2:
+            DELETE (incorrect UUID) -> 404 Not Found
+        case 3:
+            DELETE (empty link) -> 400 Bad Request
+        case 4:
+            DELETE (incorrect type UUID (ex - text)) -> 400 Bad Request
 
 
 

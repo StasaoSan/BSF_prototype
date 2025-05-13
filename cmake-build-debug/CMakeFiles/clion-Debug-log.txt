@@ -1,4 +1,16 @@
 /home/tikhonov-a/Documents/clion-2024.2.3/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/tikhonov-a/Documents/clion-2024.2.3/bin/ninja/linux/x64/ninja -DCMAKE_PREFIX_PATH=/usr/local/share/cmake -G Ninja -S /home/tikhonov-a/CLionProjects/BSF_prototype -B /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- The C compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
 -- Building utest with gtest and ubench with gbench
 -- rseq-based acceleration is enabled by default
 -- Modules type search priority order: .so;.a (Default ordered)
@@ -7,26 +19,44 @@
 -- C++ standard 20
 -- Using the default system linker, probably GNU ld
 -- LTO: disabled (user request)
+-- Performing Test LINKER_HAS_ZSTD
+-- Performing Test LINKER_HAS_ZSTD - Success
 -- Using linker debug info compression: zstd
+-- Performing Test HAS_gz_zstd
+-- Performing Test HAS_gz_zstd - Success
 -- Checking -gz=zstd - found
 -- Using compiler debug info compression: zstd
 -- Linker global flags:  -Wl,--gc-sections
 -- ccache: enabled, but not found
 -- Debug build: CMAKE_BUILD_TYPE == 'Debug'
+-- Found Git: /usr/bin/git (found version "2.43.0")
 -- Python: python3
 -- Setting up the venv at /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/venv-utest
 -- CPM: Adding package googletest@1.14.0 (v1.14.0)
+-- Found Python3: /usr/bin/python3.12 (found version "3.12.3") found components: Interpreter
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
 -- boost: 1.83.0
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")
+-- dpkg-query version of libyaml-cpp-dev: 0.8.0+dfsg-6build1
+-- Found yaml-cpp: /usr/lib/x86_64-linux-gnu/libyaml-cpp.so
 -- yaml-cpp include directories: /usr/include
 -- yaml-cpp libraries: /usr/lib/x86_64-linux-gnu/libyaml-cpp.so
+-- dpkg-query version of libzstd-dev: 1.5.5+dfsg2-2build1
+-- Found zstd: /usr/lib/x86_64-linux-gnu/libzstd.so
 -- zstd include directories: /usr/include
 -- zstd libraries: /usr/lib/x86_64-linux-gnu/libzstd.so
 -- dpkg-query: no packages found matching libcrypto++-dev
 
+-- Failed to find 'rpm'
+-- Failed to find 'pacman'
 -- Checking for module 'libcrypto++'
 --   Package 'libcrypto++', required by 'virtual:world', not found
 ERRORFailed to find libcrypto++ via pkg-config
 -- CPM: Adding package cryptopp-cmake@8.9.0 (CRYPTOPP_8_9_0)
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/cc
 => Project : cryptopp-cmake v8.9.0
 -- Crypto++ auto fetched at: /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/_deps/cryptopp-cmake-build/cryptopp
 -- Using branch HEAD for tests
@@ -37,6 +67,26 @@ ERRORFailed to find libcrypto++ via pkg-config
 -- [cryptopp] CMAKE_HOST_SYSTEM_PROCESSOR : x86_64
 -- [cryptopp]      CMAKE_SYSTEM_PROCESSOR : x86_64
 -- [cryptopp] Target architecture detected as: x86_64 -> CRYPTOPP_AMD64
+-- [cryptopp] Performing Test CRYPTOPP_HAVE_SSE2
+-- [cryptopp] Performing Test CRYPTOPP_HAVE_SSE2 - Success
+-- [cryptopp] Performing Test CRYPTOPP_HAVE_SSE3
+-- [cryptopp] Performing Test CRYPTOPP_HAVE_SSE3 - Success
+-- [cryptopp] Performing Test CRYPTOPP_HAVE_SSSE3
+-- [cryptopp] Performing Test CRYPTOPP_HAVE_SSSE3 - Success
+-- [cryptopp] Performing Test CRYPTOPP_HAVE_SSE41
+-- [cryptopp] Performing Test CRYPTOPP_HAVE_SSE41 - Success
+-- [cryptopp] Performing Test CRYPTOPP_HAVE_SSE42
+-- [cryptopp] Performing Test CRYPTOPP_HAVE_SSE42 - Success
+-- [cryptopp] Performing Test CRYPTOPP_HAVE_CLMUL
+-- [cryptopp] Performing Test CRYPTOPP_HAVE_CLMUL - Success
+-- [cryptopp] Performing Test CRYPTOPP_HAVE_AESNI
+-- [cryptopp] Performing Test CRYPTOPP_HAVE_AESNI - Success
+-- [cryptopp] Performing Test CRYPTOPP_HAVE_AVX
+-- [cryptopp] Performing Test CRYPTOPP_HAVE_AVX - Success
+-- [cryptopp] Performing Test CRYPTOPP_HAVE_AVX2
+-- [cryptopp] Performing Test CRYPTOPP_HAVE_AVX2 - Success
+-- [cryptopp] Performing Test CRYPTOPP_HAVE_SHANI
+-- [cryptopp] Performing Test CRYPTOPP_HAVE_SHANI - Success
 -- [cryptopp] Generating cmake package config files
 -- [cryptopp] Generating pkgconfig files
 -- [cryptopp] Platform: x86_64
@@ -82,18 +132,44 @@ CMake Deprecation Warning at cmake-build-debug/_deps/cctz-src/CMakeLists.txt:1 (
  * Threads
 
 -- DWCAS: Using boost::atomic
--- DWCAS works
+-- Performing Test HAS_mcx16
+-- Performing Test HAS_mcx16 - Success
+-- DWCAS works - checked
+-- Performing Test HAS_ftemplate_backtrace_limit_0
+-- Performing Test HAS_ftemplate_backtrace_limit_0 - Success
 -- Checking -ftemplate-backtrace-limit=0 - found
+-- Performing Test HAS_Wdisabled_optimization
+-- Performing Test HAS_Wdisabled_optimization - Success
 -- Checking -Wdisabled-optimization - found
+-- Performing Test HAS_Winvalid_pch
+-- Performing Test HAS_Winvalid_pch - Success
 -- Checking -Winvalid-pch - found
+-- Performing Test HAS_Wimplicit_fallthrough
+-- Performing Test HAS_Wimplicit_fallthrough - Success
 -- Checking -Wimplicit-fallthrough - found
+-- Performing Test HAS_Wlogical_op
+-- Performing Test HAS_Wlogical_op - Success
 -- Checking -Wlogical-op - found
+-- Performing Test HAS_Wformat_2
+-- Performing Test HAS_Wformat_2 - Success
 -- Checking -Wformat=2 - found
+-- Performing Test HAS_Wno_error_deprecated_declarations
+-- Performing Test HAS_Wno_error_deprecated_declarations - Success
 -- Checking -Wno-error=deprecated-declarations - found
+-- Performing Test HAS_Wno_useless_cast
+-- Performing Test HAS_Wno_useless_cast - Success
 -- Checking -Wno-useless-cast - found
+-- Performing Test HAS_Wno_gnu_zero_variadic_macro_arguments
+-- Performing Test HAS_Wno_gnu_zero_variadic_macro_arguments - Success
 -- Checking -Wno-gnu-zero-variadic-macro-arguments - found
+-- Performing Test HAS_fmacro_prefix_map_a_b
+-- Performing Test HAS_fmacro_prefix_map_a_b - Success
 -- Checking -fmacro-prefix-map=a=b - found
+-- Looking for C++ include variant
+-- Looking for C++ include variant - found
 -- Putting userver into namespace 'userver': namespace userver { inline namespace v2_9_rc {  } }
+-- dpkg-query version of libjemalloc-dev: 5.3.0-2build1
+-- Found jemalloc: /usr/lib/x86_64-linux-gnu/libjemalloc.so
 -- jemalloc include directories: /usr/include
 -- jemalloc libraries: /usr/lib/x86_64-linux-gnu/libjemalloc.so
 -- dpkg-query: no packages found matching libre2-dev
@@ -104,6 +180,7 @@ ERRORFailed to find re2 via pkg-config
 -- CPM: Adding package re2@2023-03-01 (2023-03-01)
 -- Found the following ICU libraries:
 --   uc (required): /usr/lib/x86_64-linux-gnu/libicuuc.so
+-- Found ICU: /usr/include (found version "74.2")
 -- Generating formats/json gdb printing header
 -- dpkg-query: no packages found matching libbenchmark-dev
 
@@ -114,9 +191,47 @@ ERRORFailed to find benchmark via pkg-config
 -- Failed to find LLVM FileCheck
 -- git version: v1.6.1 normalized to 1.6.1
 -- Version: 1.6.1
+-- Looking for shm_open in rt
+-- Looking for shm_open in rt - found
+-- Performing Test HAVE_CXX_FLAG_STD_CXX11
+-- Performing Test HAVE_CXX_FLAG_STD_CXX11 - Success
+-- Performing Test HAVE_CXX_FLAG_WALL
+-- Performing Test HAVE_CXX_FLAG_WALL - Success
+-- Performing Test HAVE_CXX_FLAG_WEXTRA
+-- Performing Test HAVE_CXX_FLAG_WEXTRA - Success
+-- Performing Test HAVE_CXX_FLAG_WSHADOW
+-- Performing Test HAVE_CXX_FLAG_WSHADOW - Success
+-- Performing Test HAVE_CXX_FLAG_WSUGGEST_OVERRIDE
+-- Performing Test HAVE_CXX_FLAG_WSUGGEST_OVERRIDE - Success
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC - Success
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC_ERRORS
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC_ERRORS - Success
+-- Performing Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32
+-- Performing Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32 - Failed
+-- Performing Test HAVE_CXX_FLAG_FSTRICT_ALIASING
+-- Performing Test HAVE_CXX_FLAG_FSTRICT_ALIASING - Success
+-- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS
+-- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS - Success
+-- Performing Test HAVE_CXX_FLAG_WSTRICT_ALIASING
+-- Performing Test HAVE_CXX_FLAG_WSTRICT_ALIASING - Success
+-- Performing Test HAVE_CXX_FLAG_WD654
+-- Performing Test HAVE_CXX_FLAG_WD654 - Failed
+-- Performing Test HAVE_CXX_FLAG_WTHREAD_SAFETY
+-- Performing Test HAVE_CXX_FLAG_WTHREAD_SAFETY - Failed
+-- Performing Test HAVE_CXX_FLAG_COVERAGE
+-- Performing Test HAVE_CXX_FLAG_COVERAGE - Success
+-- Performing Test HAVE_STD_REGEX
+-- Performing Test HAVE_STD_REGEX
 -- Performing Test HAVE_STD_REGEX -- success
+-- Performing Test HAVE_GNU_POSIX_REGEX
+-- Performing Test HAVE_GNU_POSIX_REGEX
 -- Performing Test HAVE_GNU_POSIX_REGEX -- failed to compile
+-- Performing Test HAVE_POSIX_REGEX
+-- Performing Test HAVE_POSIX_REGEX
 -- Performing Test HAVE_POSIX_REGEX -- success
+-- Performing Test HAVE_STEADY_CLOCK
+-- Performing Test HAVE_STEADY_CLOCK
 -- Performing Test HAVE_STEADY_CLOCK -- success
 -- Found chaotic-gen: /home/tikhonov-a/CLionProjects/BSF_prototype/userver/chaotic/bin/chaotic-gen
 -- Found chaotic-gen-dynamic-configs: /home/tikhonov-a/CLionProjects/BSF_prototype/userver/chaotic/bin-dynamic-configs/chaotic-gen-dynamic-configs
@@ -124,8 +239,20 @@ ERRORFailed to find benchmark via pkg-config
 -- Found clang-format: /usr/bin/clang-format
 -- Setting up the venv at /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug/venv-userver-chaotic
 -- Userver version 2.9-rc
+-- Looking for accept4
+-- Looking for accept4 - found
+-- Looking for pipe2
+-- Looking for pipe2 - found
+-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.3")
+-- Performing Test Iconv_IS_BUILT_IN
+-- Performing Test Iconv_IS_BUILT_IN - Success
+-- Found Iconv: built in to C library
+-- dpkg-query version of libnghttp2-dev: 1.59.0-1ubuntu0.1
+-- Found libnghttp2: /usr/lib/x86_64-linux-gnu/libnghttp2.so
 -- libnghttp2 include directories: /usr/include
 -- libnghttp2 libraries: /usr/lib/x86_64-linux-gnu/libnghttp2.so
+-- dpkg-query version of libev-dev: 4.33-2.1build1
+-- Found libev: /usr/lib/x86_64-linux-gnu/libev.so
 -- libev include directories: /usr/include
 -- libev libraries: /usr/lib/x86_64-linux-gnu/libev.so
 -- dpkg-query: no packages found matching libc-ares-dev
@@ -142,10 +269,1126 @@ CMake Deprecation Warning at cmake-build-debug/_deps/c-ares-src/CMakeLists.txt:1
   CMake that the project does not need compatibility with older versions.
 
 
+-- Looking for res_servicename
+-- Looking for res_servicename - not found
+-- Looking for res_servicename in resolv
+-- Looking for res_servicename in resolv - not found
+-- Looking for gethostbyname
+-- Looking for gethostbyname - found
+-- Looking for socket
+-- Looking for socket - found
+-- Looking for clock_gettime
+-- Looking for clock_gettime - found
+-- Looking for include file sys/types.h
+-- Looking for include file sys/types.h - found
+-- Looking for include file sys/socket.h
+-- Looking for include file sys/socket.h - found
+-- Looking for include file sys/sockio.h
+-- Looking for include file sys/sockio.h - not found
+-- Looking for include file arpa/inet.h
+-- Looking for include file arpa/inet.h - found
+-- Looking for include file arpa/nameser_compat.h
+-- Looking for include file arpa/nameser_compat.h - found
+-- Looking for include file arpa/nameser.h
+-- Looking for include file arpa/nameser.h - found
+-- Looking for include file assert.h
+-- Looking for include file assert.h - found
+-- Looking for include file errno.h
+-- Looking for include file errno.h - found
+-- Looking for include file fcntl.h
+-- Looking for include file fcntl.h - found
+-- Looking for include file inttypes.h
+-- Looking for include file inttypes.h - found
+-- Looking for include file limits.h
+-- Looking for include file limits.h - found
+-- Looking for include file malloc.h
+-- Looking for include file malloc.h - found
+-- Looking for include file memory.h
+-- Looking for include file memory.h - found
+-- Looking for include file netdb.h
+-- Looking for include file netdb.h - found
+-- Looking for include file netinet/in.h
+-- Looking for include file netinet/in.h - found
+-- Looking for include file net/if.h
+-- Looking for include file net/if.h - found
+-- Looking for include file signal.h
+-- Looking for include file signal.h - found
+-- Looking for include file socket.h
+-- Looking for include file socket.h - not found
+-- Looking for include file stdbool.h
+-- Looking for include file stdbool.h - found
+-- Looking for include file stdint.h
+-- Looking for include file stdint.h - found
+-- Looking for include file stdlib.h
+-- Looking for include file stdlib.h - found
+-- Looking for include file strings.h
+-- Looking for include file strings.h - found
+-- Looking for include file string.h
+-- Looking for include file string.h - found
+-- Looking for include file stropts.h
+-- Looking for include file stropts.h - not found
+-- Looking for include file sys/ioctl.h
+-- Looking for include file sys/ioctl.h - found
+-- Looking for include file sys/param.h
+-- Looking for include file sys/param.h - found
+-- Looking for include file sys/select.h
+-- Looking for include file sys/select.h - found
+-- Looking for include file sys/stat.h
+-- Looking for include file sys/stat.h - found
+-- Looking for include file sys/time.h
+-- Looking for include file sys/time.h - found
+-- Looking for include file sys/uio.h
+-- Looking for include file sys/uio.h - found
+-- Looking for include file time.h
+-- Looking for include file time.h - found
+-- Looking for include file dlfcn.h
+-- Looking for include file dlfcn.h - found
+-- Looking for include file unistd.h
+-- Looking for include file unistd.h - found
+-- Looking for include files sys/types.h, netinet/tcp.h
+-- Looking for include files sys/types.h, netinet/tcp.h - found
+-- Performing Test HAVE_SOCKLEN_T
+-- Performing Test HAVE_SOCKLEN_T - Success
+-- Performing Test HAVE_TYPE_SOCKET
+-- Performing Test HAVE_TYPE_SOCKET - Failed
+-- Performing Test HAVE_BOOL_T
+-- Performing Test HAVE_BOOL_T - Success
+-- Performing Test HAVE_SSIZE_T
+-- Performing Test HAVE_SSIZE_T - Success
+-- Performing Test HAVE_LONGLONG
+-- Performing Test HAVE_LONGLONG - Success
+-- Performing Test HAVE_SIG_ATOMIC_T
+-- Performing Test HAVE_SIG_ATOMIC_T - Success
+-- Performing Test HAVE_STRUCT_ADDRINFO
+-- Performing Test HAVE_STRUCT_ADDRINFO - Success
+-- Performing Test HAVE_STRUCT_IN6_ADDR
+-- Performing Test HAVE_STRUCT_IN6_ADDR - Success
+-- Performing Test HAVE_STRUCT_SOCKADDR_IN6
+-- Performing Test HAVE_STRUCT_SOCKADDR_IN6 - Success
+-- Performing Test HAVE_STRUCT_SOCKADDR_STORAGE
+-- Performing Test HAVE_STRUCT_SOCKADDR_STORAGE - Success
+-- Performing Test HAVE_STRUCT_TIMEVAL
+-- Performing Test HAVE_STRUCT_TIMEVAL - Success
+-- Looking for AF_INET6
+-- Looking for AF_INET6 - found
+-- Looking for O_NONBLOCK
+-- Looking for O_NONBLOCK - found
+-- Looking for FIONBIO
+-- Looking for FIONBIO - found
+-- Looking for SIOCGIFADDR
+-- Looking for SIOCGIFADDR - found
+-- Looking for MSG_NOSIGNAL
+-- Looking for MSG_NOSIGNAL - found
+-- Looking for PF_INET6
+-- Looking for PF_INET6 - found
+-- Looking for SO_NONBLOCK
+-- Looking for SO_NONBLOCK - not found
+-- Looking for CLOCK_MONOTONIC
+-- Looking for CLOCK_MONOTONIC - found
+-- Performing Test HAVE_SOCKADDR_IN6_SIN6_SCOPE_ID
+-- Performing Test HAVE_SOCKADDR_IN6_SIN6_SCOPE_ID - Success
+-- Performing Test HAVE_LL
+-- Performing Test HAVE_LL - Success
+-- Looking for bitncmp
+-- Looking for bitncmp - not found
+-- Looking for closesocket
+-- Looking for closesocket - not found
+-- Looking for CloseSocket
+-- Looking for CloseSocket - not found
+-- Looking for connect
+-- Looking for connect - found
+-- Looking for fcntl
+-- Looking for fcntl - found
+-- Looking for freeaddrinfo
+-- Looking for freeaddrinfo - found
+-- Looking for getaddrinfo
+-- Looking for getaddrinfo - found
+-- Looking for getenv
+-- Looking for getenv - found
+-- Looking for gethostbyaddr
+-- Looking for gethostbyaddr - found
+-- Looking for gethostbyname
+-- Looking for gethostbyname - found
+-- Looking for gethostname
+-- Looking for gethostname - found
+-- Looking for getnameinfo
+-- Looking for getnameinfo - found
+-- Looking for getservbyport_r
+-- Looking for getservbyport_r - found
+-- Looking for getservbyname_r
+-- Looking for getservbyname_r - found
+-- Looking for gettimeofday
+-- Looking for gettimeofday - found
+-- Looking for if_indextoname
+-- Looking for if_indextoname - found
+-- Looking for inet_net_pton
+-- Looking for inet_net_pton - not found
+-- Looking for inet_ntop
+-- Looking for inet_ntop - found
+-- Looking for inet_pton
+-- Looking for inet_pton - found
+-- Looking for ioctl
+-- Looking for ioctl - found
+-- Looking for ioctlsocket
+-- Looking for ioctlsocket - not found
+-- Looking for IoctlSocket
+-- Looking for IoctlSocket - not found
+-- Looking for recv
+-- Looking for recv - found
+-- Looking for recvfrom
+-- Looking for recvfrom - found
+-- Looking for send
+-- Looking for send - found
+-- Looking for setsockopt
+-- Looking for setsockopt - found
+-- Looking for socket
+-- Looking for socket - found
+-- Looking for strcasecmp
+-- Looking for strcasecmp - found
+-- Looking for strcmpi
+-- Looking for strcmpi - not found
+-- Looking for strdup
+-- Looking for strdup - found
+-- Looking for stricmp
+-- Looking for stricmp - not found
+-- Looking for strncasecmp
+-- Looking for strncasecmp - found
+-- Looking for strncmpi
+-- Looking for strncmpi - not found
+-- Looking for strnicmp
+-- Looking for strnicmp - not found
+-- Looking for writev
+-- Looking for writev - found
+-- Looking for __system_property_get
+-- Looking for __system_property_get - not found
 -- Could NOT find CURL (missing: CURL_LIBRARY CURL_INCLUDE_DIR) (Required is at least version "7.68")
 -- CPM: Adding package curl@7.81 (curl-7_81_0)
 -- curl version=[7.81.0-DEV]
+-- Performing Test OPT_pedantic
+-- Performing Test OPT_pedantic - Success
+-- Performing Test OPT_Wall
+-- Performing Test OPT_Wall - Success
+-- Performing Test OPT_W
+-- Performing Test OPT_W - Success
+-- Performing Test OPT_Wpointer_arith
+-- Performing Test OPT_Wpointer_arith - Success
+-- Performing Test OPT_Wwrite_strings
+-- Performing Test OPT_Wwrite_strings - Success
+-- Performing Test OPT_Wunused
+-- Performing Test OPT_Wunused - Success
+-- Performing Test OPT_Wshadow
+-- Performing Test OPT_Wshadow - Success
+-- Performing Test OPT_Winline
+-- Performing Test OPT_Winline - Success
+-- Performing Test OPT_Wnested_externs
+-- Performing Test OPT_Wnested_externs - Success
+-- Performing Test OPT_Wmissing_declarations
+-- Performing Test OPT_Wmissing_declarations - Success
+-- Performing Test OPT_Wmissing_prototypes
+-- Performing Test OPT_Wmissing_prototypes - Success
+-- Performing Test OPT_Wfloat_equal
+-- Performing Test OPT_Wfloat_equal - Success
+-- Performing Test OPT_Wsign_compare
+-- Performing Test OPT_Wsign_compare - Success
+-- Performing Test OPT_Wundef
+-- Performing Test OPT_Wundef - Success
+-- Performing Test OPT_Wendif_labels
+-- Performing Test OPT_Wendif_labels - Success
+-- Performing Test OPT_Wstrict_prototypes
+-- Performing Test OPT_Wstrict_prototypes - Success
+-- Performing Test OPT_Wdeclaration_after_statement
+-- Performing Test OPT_Wdeclaration_after_statement - Success
+-- Performing Test OPT_Wstrict_aliasing_3
+-- Performing Test OPT_Wstrict_aliasing_3 - Success
+-- Performing Test OPT_Wcast_align
+-- Performing Test OPT_Wcast_align - Success
+-- Performing Test OPT_Wtype_limits
+-- Performing Test OPT_Wtype_limits - Success
+-- Performing Test OPT_Wold_style_declaration
+-- Performing Test OPT_Wold_style_declaration - Success
+-- Performing Test OPT_Wmissing_parameter_type
+-- Performing Test OPT_Wmissing_parameter_type - Success
+-- Performing Test OPT_Wempty_body
+-- Performing Test OPT_Wempty_body - Success
+-- Performing Test OPT_Wclobbered
+-- Performing Test OPT_Wclobbered - Success
+-- Performing Test OPT_Wignored_qualifiers
+-- Performing Test OPT_Wignored_qualifiers - Success
+-- Performing Test OPT_Wconversion
+-- Performing Test OPT_Wconversion - Success
+-- Performing Test OPT_Wvla
+-- Performing Test OPT_Wvla - Success
+-- Performing Test OPT_Wdouble_promotion
+-- Performing Test OPT_Wdouble_promotion - Success
+-- Performing Test OPTlong_long
+-- Performing Test OPTlong_long - Success
+-- Performing Test OPTmultichar
+-- Performing Test OPTmultichar - Success
+-- Performing Test OPTformat_nonliteral
+-- Performing Test OPTformat_nonliteral - Success
+-- Performing Test OPTsign_conversion
+-- Performing Test OPTsign_conversion - Success
+-- Performing Test OPTsystem_headers
+-- Performing Test OPTsystem_headers - Success
+-- Performing Test OPTpedantic_ms_format
+-- Performing Test OPTpedantic_ms_format - Failed
+-- Performing Test HAVE_SOCKADDR_IN6_SIN6_ADDR
+-- Performing Test HAVE_SOCKADDR_IN6_SIN6_ADDR - Success
+-- Found Perl: /usr/bin/perl (found version "5.38.2")
+-- Looking for dlopen in dl;
+-- Looking for dlopen in dl; - found
+-- Looking for connect in socket;dl
+-- Looking for connect in socket;dl - not found
+-- Looking for gethostbyname in c
+-- Looking for gethostbyname in c - found
+-- Looking for openssl/crypto.h
+-- Looking for openssl/crypto.h - found
+-- Looking for openssl/err.h
+-- Looking for openssl/err.h - found
+-- Looking for openssl/pem.h
+-- Looking for openssl/pem.h - found
+-- Looking for openssl/rsa.h
+-- Looking for openssl/rsa.h - found
+-- Looking for openssl/ssl.h
+-- Looking for openssl/ssl.h - found
+-- Looking for openssl/x509.h
+-- Looking for openssl/x509.h - found
+-- Looking for openssl/rand.h
+-- Looking for openssl/rand.h - found
+-- Looking for RAND_status
+-- Looking for RAND_status - not found
+-- Looking for RAND_screen
+-- Looking for RAND_screen - not found
+-- Looking for RAND_egd
+-- Looking for RAND_egd - not found
+-- Looking for ldap_init in ldap;dl;OpenSSL::SSL;OpenSSL::Crypto
+-- Looking for ldap_init in ldap;dl;OpenSSL::SSL;OpenSSL::Crypto - not found
+-- Looking for ber_init in lber;dl;OpenSSL::SSL;OpenSSL::Crypto
+-- Looking for ber_init in lber;dl;OpenSSL::SSL;OpenSSL::Crypto - not found
+-- Looking for include file ldap.h
+-- Looking for include file ldap.h - not found
+-- Looking for include file lber.h
+-- Looking for include file lber.h - not found
+-- LDAP_H not found CURL_DISABLE_LDAP set ON
+-- LDAP needs to be enabled to support LDAPS
+-- Looking for dlopen in dl;OpenSSL::SSL;OpenSSL::Crypto
+-- Looking for dlopen in dl;OpenSSL::SSL;OpenSSL::Crypto - found
 -- Could NOT find LibSSH2 (missing: LIBSSH2_LIBRARY LIBSSH2_INCLUDE_DIR) 
+-- Performing Test USE_UNIX_SOCKETS
+-- Performing Test USE_UNIX_SOCKETS - Success
+-- Found CA bundle: /etc/ssl/certs/ca-certificates.crt
+-- Looking for include file stdio.h
+-- Looking for include file stdio.h - found
+-- Looking for 3 include files stdio.h, ..., sys/filio.h
+-- Looking for 3 include files stdio.h, ..., sys/filio.h - not found
+-- Looking for 5 include files stdio.h, ..., sys/poll.h
+-- Looking for 5 include files stdio.h, ..., sys/poll.h - found
+-- Looking for 6 include files stdio.h, ..., sys/resource.h
+-- Looking for 6 include files stdio.h, ..., sys/resource.h - found
+-- Looking for 13 include files stdio.h, ..., sys/un.h
+-- Looking for 13 include files stdio.h, ..., sys/un.h - found
+-- Looking for 14 include files stdio.h, ..., sys/utime.h
+-- Looking for 14 include files stdio.h, ..., sys/utime.h - not found
+-- Looking for 14 include files stdio.h, ..., sys/xattr.h
+-- Looking for 14 include files stdio.h, ..., sys/xattr.h - found
+-- Looking for 15 include files stdio.h, ..., alloca.h
+-- Looking for 15 include files stdio.h, ..., alloca.h - found
+-- Looking for 17 include files stdio.h, ..., arpa/tftp.h
+-- Looking for 17 include files stdio.h, ..., arpa/tftp.h - found
+-- Looking for 21 include files stdio.h, ..., idn2.h
+-- Looking for 21 include files stdio.h, ..., idn2.h - not found
+-- Looking for 21 include files stdio.h, ..., ifaddrs.h
+-- Looking for 21 include files stdio.h, ..., ifaddrs.h - found
+-- Looking for 22 include files stdio.h, ..., io.h
+-- Looking for 22 include files stdio.h, ..., io.h - not found
+-- Looking for 22 include files stdio.h, ..., krb.h
+-- Looking for 22 include files stdio.h, ..., krb.h - not found
+-- Looking for 22 include files stdio.h, ..., libgen.h
+-- Looking for 22 include files stdio.h, ..., libgen.h - found
+-- Looking for 23 include files stdio.h, ..., locale.h
+-- Looking for 23 include files stdio.h, ..., locale.h - found
+-- Looking for linux/tcp.h
+-- Looking for linux/tcp.h - found
+-- Looking for 28 include files stdio.h, ..., pem.h
+-- Looking for 28 include files stdio.h, ..., pem.h - not found
+-- Looking for 28 include files stdio.h, ..., poll.h
+-- Looking for 28 include files stdio.h, ..., poll.h - found
+-- Looking for 29 include files stdio.h, ..., pwd.h
+-- Looking for 29 include files stdio.h, ..., pwd.h - found
+-- Looking for 30 include files stdio.h, ..., setjmp.h
+-- Looking for 30 include files stdio.h, ..., setjmp.h - found
+-- Looking for 32 include files stdio.h, ..., ssl.h
+-- Looking for 32 include files stdio.h, ..., ssl.h - not found
+-- Looking for 38 include files stdio.h, ..., termio.h
+-- Looking for 38 include files stdio.h, ..., termio.h - found
+-- Looking for 39 include files stdio.h, ..., termios.h
+-- Looking for 39 include files stdio.h, ..., termios.h - found
+-- Looking for 42 include files stdio.h, ..., utime.h
+-- Looking for 42 include files stdio.h, ..., utime.h - found
+-- Looking for 43 include files stdio.h, ..., x509.h
+-- Looking for 43 include files stdio.h, ..., x509.h - not found
+-- Looking for 43 include files stdio.h, ..., process.h
+-- Looking for 43 include files stdio.h, ..., process.h - not found
+-- Looking for 43 include files stdio.h, ..., stddef.h
+-- Looking for 43 include files stdio.h, ..., stddef.h - found
+-- Looking for 47 include files stdio.h, ..., netinet/if_ether.h
+-- Looking for 47 include files stdio.h, ..., netinet/if_ether.h - found
+-- Looking for 49 include files stdio.h, ..., sockio.h
+-- Looking for 49 include files stdio.h, ..., sockio.h - not found
+-- Looking for 49 include files stdio.h, ..., sys/utsname.h
+-- Looking for 49 include files stdio.h, ..., sys/utsname.h - found
+-- Check size of size_t
+-- Check size of size_t - done
+-- Check size of ssize_t
+-- Check size of ssize_t - done
+-- Check size of long long
+-- Check size of long long - done
+-- Check size of long
+-- Check size of long - done
+-- Check size of short
+-- Check size of short - done
+-- Check size of int
+-- Check size of int - done
+-- Check size of __int64
+-- Check size of __int64 - failed
+-- Check size of long double
+-- Check size of long double - done
+-- Check size of time_t
+-- Check size of time_t - done
+-- Looking for basename
+-- Looking for basename - found
+-- Looking for select
+-- Looking for select - found
+-- Looking for poll
+-- Looking for poll - found
+-- Looking for strstr
+-- Looking for strstr - found
+-- Looking for strtok_r
+-- Looking for strtok_r - found
+-- Looking for strftime
+-- Looking for strftime - found
+-- Looking for uname
+-- Looking for uname - found
+-- Looking for alarm
+-- Looking for alarm - found
+-- Looking for getppid
+-- Looking for getppid - found
+-- Looking for utimes
+-- Looking for utimes - found
+-- Looking for inet_addr
+-- Looking for inet_addr - found
+-- Looking for sigsetjmp
+-- Looking for sigsetjmp - found
+-- Looking for getpass_r
+-- Looking for getpass_r - not found
+-- Looking for getpwuid
+-- Looking for getpwuid - found
+-- Looking for getpwuid_r
+-- Looking for getpwuid_r - found
+-- Looking for geteuid
+-- Looking for geteuid - found
+-- Looking for usleep
+-- Looking for usleep - found
+-- Looking for utime
+-- Looking for utime - found
+-- Looking for gmtime_r
+-- Looking for gmtime_r - found
+-- Looking for localtime_r
+-- Looking for localtime_r - found
+-- Looking for gethostbyname_r
+-- Looking for gethostbyname_r - found
+-- Looking for signal
+-- Looking for signal - found
+-- Looking for SIGALRM
+-- Looking for SIGALRM - found
+-- Looking for strtoll
+-- Looking for strtoll - found
+-- Looking for _strtoi64
+-- Looking for _strtoi64 - not found
+-- Looking for strerror_r
+-- Looking for strerror_r - found
+-- Looking for siginterrupt
+-- Looking for siginterrupt - found
+-- Looking for pipe
+-- Looking for pipe - found
+-- Looking for ftruncate
+-- Looking for ftruncate - found
+-- Looking for getprotobyname
+-- Looking for getprotobyname - found
+-- Looking for getpeername
+-- Looking for getpeername - found
+-- Looking for getsockname
+-- Looking for getsockname - found
+-- Looking for if_nametoindex
+-- Looking for if_nametoindex - found
+-- Looking for getrlimit
+-- Looking for getrlimit - found
+-- Looking for setlocale
+-- Looking for setlocale - found
+-- Looking for setmode
+-- Looking for setmode - not found
+-- Looking for setrlimit
+-- Looking for setrlimit - found
+-- Looking for mach_absolute_time
+-- Looking for mach_absolute_time - not found
+-- Looking for fsetxattr
+-- Looking for fsetxattr - found
+-- Performing Curl Test HAVE_FSETXATTR_5
+-- Performing Curl Test HAVE_FSETXATTR_5 - Success
+-- Performing Curl Test HAVE_FSETXATTR_6
+-- Performing Curl Test HAVE_FSETXATTR_6 - Failed
+-- Check size of sa_family_t
+-- Check size of sa_family_t - done
+-- Check size of ADDRESS_FAMILY
+-- Check size of ADDRESS_FAMILY - failed
+-- Looking for sigaction
+-- Looking for sigaction - found
+-- Performing Curl Test HAVE_FCNTL_O_NONBLOCK
+-- Performing Curl Test HAVE_FCNTL_O_NONBLOCK - Success
+-- Performing Curl Test HAVE_IOCTLSOCKET_CAMEL_FIONBIO
+-- Performing Curl Test HAVE_IOCTLSOCKET_CAMEL_FIONBIO - Failed
+-- Performing Curl Test HAVE_IOCTLSOCKET_FIONBIO
+-- Performing Curl Test HAVE_IOCTLSOCKET_FIONBIO - Failed
+-- Performing Curl Test HAVE_IOCTL_FIONBIO
+-- Performing Curl Test HAVE_IOCTL_FIONBIO - Success
+-- Performing Curl Test HAVE_SETSOCKOPT_SO_NONBLOCK
+-- Performing Curl Test HAVE_SETSOCKOPT_SO_NONBLOCK - Failed
+-- Performing Curl Test TIME_WITH_SYS_TIME
+-- Performing Curl Test TIME_WITH_SYS_TIME - Success
+-- Performing Curl Test HAVE_GETHOSTBYNAME_R_3
+-- Performing Curl Test HAVE_GETHOSTBYNAME_R_3 - Failed
+-- Performing Curl Test HAVE_GETHOSTBYNAME_R_5
+-- Performing Curl Test HAVE_GETHOSTBYNAME_R_5 - Failed
+-- Performing Curl Test HAVE_GETHOSTBYNAME_R_6
+-- Performing Curl Test HAVE_GETHOSTBYNAME_R_6 - Success
+-- Performing Curl Test HAVE_GETHOSTBYNAME_R_3_REENTRANT
+-- Performing Curl Test HAVE_GETHOSTBYNAME_R_3_REENTRANT - Failed
+-- Performing Curl Test HAVE_GETHOSTBYNAME_R_5_REENTRANT
+-- Performing Curl Test HAVE_GETHOSTBYNAME_R_5_REENTRANT - Failed
+-- Performing Curl Test HAVE_GETHOSTBYNAME_R_6_REENTRANT
+-- Performing Curl Test HAVE_GETHOSTBYNAME_R_6_REENTRANT - Success
+-- Performing Curl Test HAVE_IN_ADDR_T
+-- Performing Curl Test HAVE_IN_ADDR_T - Success
+-- Performing Curl Test STDC_HEADERS
+-- Performing Curl Test STDC_HEADERS - Success
+-- Performing Curl Test HAVE_FILE_OFFSET_BITS
+-- Performing Curl Test HAVE_FILE_OFFSET_BITS - Success
+-- Performing Curl Test HAVE_VARIADIC_MACROS_C99
+-- Performing Curl Test HAVE_VARIADIC_MACROS_C99 - Success
+-- Performing Curl Test HAVE_VARIADIC_MACROS_GCC
+-- Performing Curl Test HAVE_VARIADIC_MACROS_GCC - Success
+-- Check size of off_t
+-- Check size of off_t - done
+-- Check size of curl_off_t
+-- Check size of curl_off_t - done
+-- Performing Curl Test HAVE_GLIBC_STRERROR_R
+-- Performing Curl Test HAVE_GLIBC_STRERROR_R - Failed
+-- Performing Curl Test HAVE_POSIX_STRERROR_R
+-- Performing Curl Test HAVE_POSIX_STRERROR_R - Success
+-- Performing Curl Test HAVE_BUILTIN_AVAILABLE
+-- Performing Curl Test HAVE_BUILTIN_AVAILABLE - Failed
+-- Performing Test curl_cv_recv
+-- Performing Test curl_cv_recv - Success
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(SOCKET, char *, int, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(SOCKET, char *, int, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(SOCKET, char *, size_t, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(SOCKET, char *, size_t, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(SOCKET, char *, socklen_t, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(SOCKET, char *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(SOCKET, char *, unsigned int, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(SOCKET, char *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(SOCKET, void *, int, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(SOCKET, void *, int, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(SOCKET, void *, size_t, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(SOCKET, void *, size_t, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(SOCKET, void *, socklen_t, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(SOCKET, void *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(SOCKET, void *, unsigned int, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(SOCKET, void *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(int, char *, int, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(int, char *, int, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(int, char *, size_t, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(int, char *, size_t, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(int, char *, socklen_t, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(int, char *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(int, char *, unsigned int, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(int, char *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(int, void *, int, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(int, void *, int, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(int, void *, size_t, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(int, void *, size_t, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(int, void *, socklen_t, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(int, void *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(int, void *, unsigned int, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: int recv(int, void *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(SOCKET, char *, int, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(SOCKET, char *, int, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(SOCKET, char *, size_t, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(SOCKET, char *, size_t, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(SOCKET, char *, socklen_t, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(SOCKET, char *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(SOCKET, char *, unsigned int, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(SOCKET, char *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(SOCKET, void *, int, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(SOCKET, void *, int, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(SOCKET, void *, size_t, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(SOCKET, void *, size_t, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(SOCKET, void *, socklen_t, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(SOCKET, void *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(SOCKET, void *, unsigned int, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(SOCKET, void *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(int, char *, int, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(int, char *, int, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(int, char *, size_t, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(int, char *, size_t, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(int, char *, socklen_t, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(int, char *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(int, char *, unsigned int, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(int, char *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(int, void *, int, int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Failed
+-- Tested: ssize_t recv(int, void *, int, unsigned int)
+-- Performing Test curl_cv_func_recv_test
+-- Performing Test curl_cv_func_recv_test - Success
+-- Tested: ssize_t recv(int, void *, size_t, int)
+-- Performing Test curl_cv_send
+-- Performing Test curl_cv_send - Success
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, const char *, int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, const char *, int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, const char *, size_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, const char *, size_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, const char *, socklen_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, const char *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, const char *, unsigned int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, const char *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, const void *, int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, const void *, int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, const void *, size_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, const void *, size_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, const void *, socklen_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, const void *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, const void *, unsigned int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, const void *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, void *, int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, void *, int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, void *, size_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, void *, size_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, void *, socklen_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, void *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, void *, unsigned int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, void *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, char *, int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, char *, int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, char *, size_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, char *, size_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, char *, socklen_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, char *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, char *, unsigned int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(SOCKET, char *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, const char *, int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, const char *, int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, const char *, size_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, const char *, size_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, const char *, socklen_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, const char *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, const char *, unsigned int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, const char *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, const void *, int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, const void *, int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, const void *, size_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, const void *, size_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, const void *, socklen_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, const void *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, const void *, unsigned int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, const void *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, void *, int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, void *, int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, void *, size_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, void *, size_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, void *, socklen_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, void *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, void *, unsigned int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, void *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, char *, int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, char *, int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, char *, size_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, char *, size_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, char *, socklen_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, char *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, char *, unsigned int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(int, char *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, const char *, int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, const char *, int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, const char *, size_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, const char *, size_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, const char *, socklen_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, const char *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, const char *, unsigned int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, const char *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, const void *, int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, const void *, int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, const void *, size_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, const void *, size_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, const void *, socklen_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, const void *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, const void *, unsigned int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, const void *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, void *, int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, void *, int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, void *, size_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, void *, size_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, void *, socklen_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, void *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, void *, unsigned int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, void *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, char *, int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, char *, int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, char *, size_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, char *, size_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, char *, socklen_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, char *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, char *, unsigned int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: int send(ssize_t, char *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, const char *, int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, const char *, int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, const char *, size_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, const char *, size_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, const char *, socklen_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, const char *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, const char *, unsigned int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, const char *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, const void *, int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, const void *, int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, const void *, size_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, const void *, size_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, const void *, socklen_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, const void *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, const void *, unsigned int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, const void *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, void *, int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, void *, int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, void *, size_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, void *, size_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, void *, socklen_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, void *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, void *, unsigned int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, void *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, char *, int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, char *, int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, char *, size_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, char *, size_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, char *, socklen_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, char *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, char *, unsigned int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(SOCKET, char *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(int, const char *, int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(int, const char *, int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(int, const char *, size_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(int, const char *, size_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(int, const char *, socklen_t, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(int, const char *, socklen_t, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(int, const char *, unsigned int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(int, const char *, unsigned int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(int, const void *, int, int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Failed
+-- Tested: ssize_t send(int, const void *, int, unsigned int)
+-- Performing Test curl_cv_func_send_test
+-- Performing Test curl_cv_func_send_test - Success
+-- Tested: ssize_t send(int, const void *, size_t, int)
+-- Check size of struct sockaddr_storage
+-- Check size of struct sockaddr_storage - done
+-- Performing Test HAVE_POLL_FINE
+-- Performing Test HAVE_POLL_FINE - Success
 -- Enabled features: SSL IPv6 unixsockets libz AsynchDNS Largefile alt-svc HSTS NTLM HTTPS-proxy
 -- Enabled protocols: DICT FILE FTP FTPS GOPHER GOPHERS HTTP HTTPS IMAP IMAPS MQTT POP3 POP3S RTSP SMB SMBS SMTP SMTPS TELNET TFTP
 -- Enabled SSL backends: OpenSSL
@@ -179,6 +1422,7 @@ CMake Deprecation Warning at cmake-build-debug/_deps/c-ares-src/CMakeLists.txt:1
 --  * USERVER_FEATURE_ROCKS
 --  * USERVER_FEATURE_S3API
 --  * USERVER_FEATURE_YDB
--- Configuring done (1.7s)
+-- Found nlohmann_json: /usr/share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake (found version "3.11.3")
+-- Configuring done (26.7s)
 -- Generating done (0.1s)
 -- Build files have been written to: /home/tikhonov-a/CLionProjects/BSF_prototype/cmake-build-debug

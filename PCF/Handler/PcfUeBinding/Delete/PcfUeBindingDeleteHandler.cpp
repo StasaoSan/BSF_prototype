@@ -11,14 +11,17 @@ std::string PcfUeBindingDeleteHandler::HandleRequestThrow(
     const userver::server::http::HttpRequest &request,
     userver::server::request::RequestContext &context) const {
     try {
-        const std::string& path = request.GetUrl();
-        const auto pos = path.find_last_of('/');
-        if (pos == std::string::npos || pos + 1 >= path.size()) {
+        if (request.GetMethod() != userver::server::http::HttpMethod::kDelete) {
+            request.GetHttpResponse().SetStatus(userver::server::http::HttpStatus::kMethodNotAllowed);
+            return R"({"error":"Method not allowed"})";
+        }
+
+        if (!request.HasPathArg("bindingId")) {
             request.GetHttpResponse().SetStatus(userver::server::http::HttpStatus::kBadRequest);
             return R"({"error":"bindingId required"})";
         }
 
-        const std::string id_str = path.substr(pos + 1);
+        const auto& id_str = request.GetPathArg("bindingId");
         std::uint64_t id{};
         try {
             id = std::stoull(id_str);
@@ -30,10 +33,9 @@ std::string PcfUeBindingDeleteHandler::HandleRequestThrow(
         if (m_service->Delete(id)) {
             request.GetHttpResponse().SetStatus(userver::server::http::HttpStatus::kNoContent);
             return {};
-        } else {
-            request.GetHttpResponse().SetStatus(userver::server::http::HttpStatus::kNotFound);
-            return R"({"error":"bindingId not found"})";
         }
+        request.GetHttpResponse().SetStatus(userver::server::http::HttpStatus::kNotFound);
+        return R"({"error":"bindingId not found"})";
     } catch (const std::invalid_argument& e) {
         userver::formats::json::ValueBuilder error;
         error["message"] = e.what();

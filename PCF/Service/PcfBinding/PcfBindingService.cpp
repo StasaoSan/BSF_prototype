@@ -5,13 +5,17 @@ PcfBindingService::PcfBindingService(const std::shared_ptr<IPcfBindingDao>& dao)
     m_dao = dao;
 }
 
-int64_t PcfBindingService::Register(org::openapitools::server::model::PcfBinding binding) {
+int64_t PcfBindingService::Register(const org::openapitools::server::model::PcfBinding& binding) {
     Validate(binding);
     return m_dao->Register(binding);
 }
 
 bool PcfBindingService::Delete(std::uint64_t uuid) {
     return m_dao->Delete(uuid);
+}
+
+bool PcfBindingService::Exist(const org::openapitools::server::model::PcfBinding &binding) {
+    return m_dao->Exist(binding);
 }
 
 std::optional<org::openapitools::server::model::PcfBinding> PcfBindingService::FindByIpv4(std::string ipv4) {

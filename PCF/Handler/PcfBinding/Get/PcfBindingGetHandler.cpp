@@ -25,12 +25,19 @@ std::string PcfBindingGetHandler::HandleRequestThrow(
             return R"({"error":"At least one of 'ipv4Addr' or 'macAddr48' is required"})";
         }
 
-        std::optional<org::openapitools::server::model::PcfBinding> binding_opt;
-        if (!ipv4.empty()) {
-            binding_opt = m_service->FindByIpv4(ipv4);
-        } else {
-            binding_opt = m_service->FindByMac(mac);
+        std::optional<org::openapitools::server::model::PcfBinding> byIpv4;
+        std::optional<org::openapitools::server::model::PcfBinding> byMac;
+
+        byIpv4 = !ipv4.empty() ? m_service->FindByIpv4(ipv4) : std::nullopt;
+        byMac = !mac.empty() ? m_service->FindByMac(mac) : std::nullopt;
+
+        if (byIpv4 && byMac && byIpv4->getPcfId() != byMac->getPcfId()) { // 400 bad req
+            userver::formats::json::ValueBuilder err;
+            err["error"]   = "MULTIPLE_BINDING_INFO_FOUND";
+            throw userver::server::handlers::ClientError(err.ExtractValue());
         }
+
+        auto binding_opt = byIpv4.has_value() ? byIpv4 : byMac;
 
         if (!binding_opt.has_value()) {
             request.GetHttpResponse().SetStatus(userver::server::http::HttpStatus::kNotFound);
@@ -66,7 +73,8 @@ std::string PcfBindingGetHandler::HandleRequestThrow(
         error["message"] = e.what();
         std::cerr << "Validation failed: " << e.what() << std::endl;
         throw userver::server::handlers::RequestParseError(error.ExtractValue());
-
+    } catch (const userver::server::handlers::RequestParseError&) {
+        throw;
     } catch (const std::exception &e) {
         userver::formats::json::ValueBuilder error;
         error["message"] = "Internal service error";

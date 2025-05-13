@@ -13,6 +13,8 @@ public:
     std::vector<org::openapitools::server::model::PcfForUeBinding> FindBySupi(const std::string& supi) const override;
     std::vector<org::openapitools::server::model::PcfForUeBinding> FindByGpsi(const std::string& gpsi) const override;
 
+    bool Exist(const org::openapitools::server::model::PcfForUeBinding &binding) const override;
+
     template<typename mapToUuid, typename Key, typename StorageMap>
     std::vector<typename StorageMap::mapped_type> FindThroughtMap(const mapToUuid map, const Key key, const StorageMap storage) const;
 private:

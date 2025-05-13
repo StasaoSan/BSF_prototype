@@ -8,6 +8,7 @@ public:
 
     std::uint64_t Register(const org::openapitools::server::model::PcfForUeBinding& binding) override;
     bool Delete(std::uint64_t uuid) override;
+    bool Exist(const org::openapitools::server::model::PcfForUeBinding &binding) override;
     std::vector<org::openapitools::server::model::PcfForUeBinding> FindBySupi(const std::string& supi) const override;
     std::vector<org::openapitools::server::model::PcfForUeBinding> FindByGpsi(const std::string& gpsi) const override;
 private:

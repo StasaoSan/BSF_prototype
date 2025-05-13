@@ -14,6 +14,7 @@ public:
 
     std::uint64_t Register(org::openapitools::server::model::PcfBinding binding) override;
     bool Delete(std::uint64_t) override;
+    bool Exist(org::openapitools::server::model::PcfBinding binding) override;
     std::optional<org::openapitools::server::model::PcfBinding> FindByIpv4(std::string ipv4) override;
     std::optional<org::openapitools::server::model::PcfBinding> FindByMac(std::string mac) override;
     template <typename Map, typename Key, typename Storage>

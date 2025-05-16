@@ -20,36 +20,36 @@ add_executable(BSF2
         UUID/IUuidGenerator.h
         UUID/UuidGenerator.cpp
         UUID/UuidGenerator.h
-        PCF/DAO/PcfBinding/InMemoryPcfBindingDao.h
-        PCF/DAO/PcfBinding/IPcfBindingDao.h
-        PCF/DAO/PcfBinding/InMemoryPcfBindingDao.cpp
-        PCF/Handler/PcfBinding/PcfBindingBaseHandler.cpp
-        PCF/Handler/PcfBinding/PcfBindingBaseHandler.h
-        PCF/Service/PcfBinding/PcfBindingService.cpp
-        PCF/Service/PcfBinding/PcfBindingService.h
-        PCF/Service/PcfBinding/IPcfBindingService.h
-        PCF/Service/PcfBinding/PcfBindingServiceComponent.h
-        PCF/DAO/PcfUeBinding/IPcfUeBindingDao.h
-        PCF/DAO/PcfUeBinding/InMemoryPcfUeBindingDao.cpp
-        PCF/DAO/PcfUeBinding/InMemoryPcfUeBindingDao.h
-        PCF/Service/PcfUeBinding/IPcfUeBindingService.h
-        PCF/Service/PcfUeBinding/PcfUeBindingService.cpp
-        PCF/Service/PcfUeBinding/PcfUeBindingService.h
-        PCF/Service/PcfUeBinding/PcfUeBindingServiceComponent.h
-        PCF/Handler/PcfUeBinding/PcfUeBindingBaseHandler.cpp
-        PCF/Handler/PcfUeBinding/PcfUeBindingBaseHandler.h
-        PCF/Handler/PcfBinding/Delete/PcfBindingDeleteHandler.h
-        PCF/Handler/PcfBinding/Delete/PcfBindingDeleteHandler.cpp
-        PCF/Handler/PcfBinding/Get/PcfBindingGetHandler.h
-        PCF/Handler/PcfBinding/Get/PcfBindingGetHandler.cpp
-        PCF/Handler/PcfBinding/Post/PcfBindingPostHandler.h
-        PCF/Handler/PcfBinding/Post/PcfBindingPostHandler.cpp
-        PCF/Handler/PcfUeBinding/Delete/PcfUeBindingDeleteHandler.h
-        PCF/Handler/PcfUeBinding/Delete/PcfUeBindingDeleteHandler.cpp
-        PCF/Handler/PcfUeBinding/Get/PcfUeBindingGetHandler.h
-        PCF/Handler/PcfUeBinding/Get/PcfUeBindingGetHandler.cpp
-        PCF/Handler/PcfUeBinding/Post/PcfUeBindingPostHandler.h
-        PCF/Handler/PcfUeBinding/Post/PcfUeBindingPostHandler.cpp
+        BSF/DAO/PcfBinding/InMemoryPcfBindingDao.h
+        BSF/DAO/PcfBinding/IPcfBindingDao.h
+        BSF/DAO/PcfBinding/InMemoryPcfBindingDao.cpp
+        BSF/Handler/PcfBinding/PcfBindingBaseHandler.cpp
+        BSF/Handler/PcfBinding/PcfBindingBaseHandler.h
+        BSF/Service/PcfBinding/PcfBindingService.cpp
+        BSF/Service/PcfBinding/PcfBindingService.h
+        BSF/Service/PcfBinding/IPcfBindingService.h
+        BSF/Service/PcfBinding/PcfBindingServiceComponent.h
+        BSF/DAO/PcfUeBinding/IPcfUeBindingDao.h
+        BSF/DAO/PcfUeBinding/InMemoryPcfUeBindingDao.cpp
+        BSF/DAO/PcfUeBinding/InMemoryPcfUeBindingDao.h
+        BSF/Service/PcfUeBinding/IPcfUeBindingService.h
+        BSF/Service/PcfUeBinding/PcfUeBindingService.cpp
+        BSF/Service/PcfUeBinding/PcfUeBindingService.h
+        BSF/Service/PcfUeBinding/PcfUeBindingServiceComponent.h
+        BSF/Handler/PcfUeBinding/PcfUeBindingBaseHandler.cpp
+        BSF/Handler/PcfUeBinding/PcfUeBindingBaseHandler.h
+        BSF/Handler/PcfBinding/Delete/PcfBindingDeleteHandler.h
+        BSF/Handler/PcfBinding/Delete/PcfBindingDeleteHandler.cpp
+        BSF/Handler/PcfBinding/Get/PcfBindingGetHandler.h
+        BSF/Handler/PcfBinding/Get/PcfBindingGetHandler.cpp
+        BSF/Handler/PcfBinding/Post/PcfBindingPostHandler.h
+        BSF/Handler/PcfBinding/Post/PcfBindingPostHandler.cpp
+        BSF/Handler/PcfUeBinding/Delete/PcfUeBindingDeleteHandler.h
+        BSF/Handler/PcfUeBinding/Delete/PcfUeBindingDeleteHandler.cpp
+        BSF/Handler/PcfUeBinding/Get/PcfUeBindingGetHandler.h
+        BSF/Handler/PcfUeBinding/Get/PcfUeBindingGetHandler.cpp
+        BSF/Handler/PcfUeBinding/Post/PcfUeBindingPostHandler.h
+        BSF/Handler/PcfUeBinding/Post/PcfUeBindingPostHandler.cpp
 )
 
 target_link_libraries(BSF2

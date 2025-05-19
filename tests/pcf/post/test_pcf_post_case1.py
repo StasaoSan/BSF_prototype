@@ -1,17 +1,14 @@
+import copy
+
 import requests
 
 from config import BASE_URL_PCF, HEADERS
 
-
-def test_pcf_post_case1():
-    data = {
-        "supi": "imsi-001011234567895",
-        "ipv4Addr": "192.168.100.2",
-        "dnn": "internet",
-        "pcfIpEndPoints": [{"ipv4Address": "172.22.0.27", "port": 7777}],
-        "snssai": {"sst": 1, "sd": 12345},
-        "suppFeat": "2"
-    }
+# valid by ipv4
+def test_pcf_post_case1(pcf_json_data):
+    data = copy.deepcopy(pcf_json_data)
+    data.pop("macAddr48", None)
+    data.pop("ipv6Addr", None)
 
     r = requests.post(BASE_URL_PCF, json=data, headers=HEADERS)
     json = r.json()

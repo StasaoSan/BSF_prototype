@@ -7,18 +7,33 @@
 #include <userver/utils/daemon_run.hpp>
 #include "gen/model/PcfBindingPatch.h"
 #include "UUID/UuidGenerator.h"
-#include "PCF/DAO/InMemoryPcfBindingDao.h"
-#include "PCF/Handler/PcfBindingHandler.h"
-#include "PCF/Service/PcfBindingService.h"
-#include "PCF/Service/PcfBindingServiceComponent.h"
+#include "BSF/DAO/PcfBinding/InMemoryPcfBindingDao.h"
+#include "BSF/Handler/PcfBinding/PcfBindingBaseHandler.h"
+#include "BSF/Handler/PcfBinding/Post/PcfBindingPostHandler.h"
+#include "BSF/Handler/PcfBinding/Get/PcfBindingGetHandler.h"
+#include "BSF/Handler/PcfBinding/Delete/PcfBindingDeleteHandler.h"
+#include "BSF/Service/PcfBinding/PcfBindingService.h"
+#include "BSF/Service/PcfBinding/PcfBindingServiceComponent.h"
 #include "userver/logging/component.hpp"
 #include "userver/server/component.hpp"
 #include "userver/tracing/component.hpp"
+#include "BSF/Service/PcfUeBinding/PcfUeBindingServiceComponent.h"
+#include "BSF/Handler/PcfUeBinding/PcfUeBindingBaseHandler.h"
+#include "BSF/Handler/PcfUeBinding/Delete/PcfUeBindingDeleteHandler.h"
+#include "BSF/Handler/PcfUeBinding/Get/PcfUeBindingGetHandler.h"
+#include "BSF/Handler/PcfUeBinding/Post/PcfUeBindingPostHandler.h"
 
 int main(int argc, char* argv[]) {
     auto component_list = userver::components::MinimalServerComponentList();
     component_list.Append<PcfBindingServiceComponent>();
-    component_list.Append<PcfBindingHandler>();
+    component_list.Append<PcfBindingPostHandler>();
+    component_list.Append<PcfBindingGetHandler>();
+    component_list.Append<PcfBindingDeleteHandler>();
+
+    component_list.Append<PcfUeBindingServiceComponent>();
+    component_list.Append<PcfUeBindingPostHandler>();
+    component_list.Append<PcfUeBindingGetHandler>();
+    component_list.Append<PcfUeBindingDeleteHandler>();
 
     auto dao = std::make_shared<InMemoryPcfBindingDao>(std::make_unique<UuidGenerator>());
     auto service = std::make_shared<PcfBindingService>(dao);

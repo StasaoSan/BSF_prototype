@@ -26,7 +26,33 @@ components_manager:
         task_processor: main-task-processor
 
     pcf-binding-service: {}
-    pcf-binding-handler:
-      path: /nbsf-management/v1/PcfBindings
-      method: GET,POST
+    pcf-binding-post:
+      path: /nbsf-management/v1/pcfBindings
+      method: POST
+      task_processor: main-task-processor
+
+    pcf-binding-get:
+      path: /nbsf-management/v1/pcfBindings
+      method: GET
+      task_processor: main-task-processor
+
+    pcf-binding-delete:
+      path: /nbsf-management/v1/pcfBindings/{bindingId}
+      method: DELETE
+      task_processor: main-task-processor
+
+    pcf-ue-binding-service: {}
+    pcf-ue-binding-post:
+      path: /nbsf-management/v1/pcf-ue-bindings
+      method: POST
+      task_processor: main-task-processor
+
+    pcf-ue-binding-get:
+      path: /nbsf-management/v1/pcf-ue-bindings
+      method: GET
+      task_processor: main-task-processor
+
+    pcf-ue-binding-delete:
+      path: /nbsf-management/v1/pcf-ue-bindings/{bindingId}
+      method: DELETE
       task_processor: main-task-processor

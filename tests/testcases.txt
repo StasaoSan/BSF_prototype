@@ -1,0 +1,96 @@
+1. pcf binding
+    - POST
+        case 1:
+            vaild POST (ipv4Addr) -> 201 Created (in headers can find URI with link and UUID)
+        case 2:
+            vaild POST (macAddr48) -> 201 Created (in headers can find URI with link and UUID)
+        case 3:
+            POST (ipv6Addr) -> 400 Bad Request (ipv6 is not supported yet)
+        case 4:
+            empty UE* fleet (others fleet exist) -> 400 Bad Request
+        case 5:
+            valid post with ipv4/mac which is exist -> 403 Forbidden (see pt 5.7 in 3GPP docs)
+        case 6:
+            post with empty body -> 400 Bad Request
+    - GET
+        case 1:
+            valid GET (ipv4Addr) -> 200 OK, JSON in response
+        case 2:
+            valid GET (macAddr48) -> 200 OK, JSON in response
+        case 3:
+            GET (ipv6Addr) -> 400 Bad Request, because UE* not exist
+        case 4:
+            GET (ipv4 + some RIGHT additional params**) -> 200 OK, JSON in responce
+        case 5:
+            GET (ipv4 + some INCORRECT additional params) -> 204 No Content
+        case 6:
+            GET (macAddr48 + some INCORRECT additional params) -> 204 No Content
+        case 7:
+            GET (ipv4, but in data layer has not one info) -> 400 Bad Request (multiple binding info found, (see pt 5.7 in 3GPP docs))
+    - DELETE
+        case 1:
+            valid DELETE -> 204 No Content
+        case 2:
+            DELETE (incorrect UUID) -> 404 Not Found
+        case 3:
+            DELETE (empty link) -> 400 Bad Request
+        case 4:
+            DELETE (incorrect type UUID (ex - text)) -> 400 Bad Request
+
+2. pcf ue binding
+    - POST
+        case 1:
+            valid POST -> 201 Created, JSON in response
+        case 2:
+            empty UE* fleet (others fleet exist) -> 400 Bad Request
+        case 3:
+            valid post with supi which is exist -> 403 Forbidden (see pt 5.7 in 3GPP docs)
+        case 4:
+            post with empty body -> 400 Bad Request
+    - GET
+        case 1:
+            valid GET (supi) -> 200 OK, json in responce
+        case 2:
+            valid GET (gpsi) -> 200 OK, json in responce
+        case 3:
+            GET (incorrect supi) -> 200 OK + empty json ("[]")
+        case 4:
+            GET (incorrect gpsi) -> 200 OK + empty json ("[]")
+
+    - DELETE
+        case 1:
+            valid DELETE -> 204 No Content
+        case 2:
+            DELETE (incorrect UUID) -> 404 Not Found
+        case 3:
+            DELETE (empty link) -> 400 Bad Request
+        case 4:
+            DELETE (incorrect type UUID (ex - text)) -> 400 Bad Request
+
+
+
+
+
+some main info:
+pcf link: localhost:8080/nbsf-management/v1/pcfBindings
+ex body pcf post: {"supi":"imsi-001011234567895","ipv4Addr":"192.168.100.2","macAddr48":"02:da:a3:0d:86:80","dnn":"internet","pcfIpEndPoints":[{"ipv4Address":"172.22.0.27","port":7777}],"snssai":{"sst":1,"sd":12345},"suppFeat":"2"}
+
+pcf ue link: localhost:8080/nbsf-management/v1/pcf-ue-bindings
+ex body pcf ue post: {
+  "supi": "imsi-250020000000002",
+  "gpsi": "msisdn-9001234567",
+  "pcfForUeFqdn": "aaa://192.0.2.10:8888",
+  "pcfForUeIpEndPoints": [
+    {
+      "ipv4Address": "192.0.2.10",
+      "port": 8888
+    }
+  ],
+  "pcfId": "9f0b3c12-1a34-45de-bd0a-2b2a8c0f96c1",
+  "pcfSetId": "pcf-set-001"
+}
+
+* UE - its ipv4Addr, or macAddr48, or ipv6Adrr, but last (ipv6) not supported yet, and so UE is ipv4 and mac
+
+** additional params for GET PCF binding is: supi (or gpsi) (only one at one time, not both), dnn (optionally snssai (sst and sd) (if dnn exist)
+

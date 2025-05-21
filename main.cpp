@@ -5,7 +5,7 @@
 #include <userver/server/handlers/http_handler_base.hpp>
 #include <userver/components/minimal_server_component_list.hpp>
 #include <userver/utils/daemon_run.hpp>
-#include "gen/model/PcfBindingPatch.h"
+#include "gen/nbsf-management/model/PcfBindingPatch.h"
 #include "UUID/UuidGenerator.h"
 #include "BSF/DAO/PcfBinding/InMemoryPcfBindingDao.h"
 #include "BSF/Handler/PcfBinding/PcfBindingBaseHandler.h"

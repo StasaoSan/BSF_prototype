@@ -3,7 +3,7 @@
 //
 #include <iostream>
 #include "PcfBindingGetHandler.h"
-#include "../../../gen/model/PcfBinding.h"
+#include "../../../gen/nbsf-management/model/PcfBinding.h"
 #include "userver/components/component_context.hpp"
 #include "../../../Service/PcfBinding/IPcfBindingService.h"
 #include "../../../Service/PcfBinding/PcfBindingServiceComponent.h"

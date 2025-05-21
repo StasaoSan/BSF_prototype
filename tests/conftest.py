@@ -3,7 +3,7 @@ import time
 import pytest
 import serverControl
 import requests
-from config import BASE_URL_PCF, HEADERS, BASE_URL_PCF_UE
+from config import BASE_URL_PCF, HEADERS, BASE_URL_PCF_UE, BASE_PCF_BINDING_JSON, BASE_PCF_UE_BINDING_JSON
 
 
 @pytest.fixture(scope="function", autouse=True)
@@ -17,16 +17,7 @@ def server():
 # --------------- PCF BINDING FIXTURES
 @pytest.fixture()
 def pcf_json_data():
-    return {
-            "supi": "imsi-001011234567895",
-            "ipv4Addr": "192.168.100.2",
-            "macAddr48": "02:da:a3:0d:86:80",
-            "ipv6Addr": "2b26:9c29:f084:04d5:e802:bf27:5a22:8aa6",
-            "dnn": "internet",
-            "pcfIpEndPoints": [{"ipv4Address": "172.22.0.27", "port": 7777}],
-            "snssai": {"sst": 1, "sd": 12345},
-            "suppFeat": "2"
-           }
+    return BASE_PCF_BINDING_JSON
 
 @pytest.fixture()
 def prepare_pcf_binding(pcf_json_data):
@@ -44,19 +35,7 @@ def prepare_pcf_delete(pcf_json_data):
 # --------------- PCF UE BINDING FIXTURES
 @pytest.fixture()
 def pcf_ue_json_data():
-    return {
-            "supi": "imsi-250020000000002",
-            "gpsi": "msisdn-9001234567",
-            "pcfForUeFqdn": "aaa://192.0.2.10:8888",
-            "pcfForUeIpEndPoints": [
-              {
-                "ipv4Address": "192.0.2.10",
-                "port": 8888
-              }
-            ],
-            "pcfId": "9f0b3c12-1a34-45de-bd0a-2b2a8c0f96c1",
-            "pcfSetId": "pcf-set-001"
-           }
+    return BASE_PCF_UE_BINDING_JSON
 
 @pytest.fixture()
 def prepare_pcf_ue_binding(pcf_ue_json_data):

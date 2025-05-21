@@ -24,9 +24,13 @@
         case 5:
             GET (ipv4 + some INCORRECT additional params) -> 204 No Content
         case 6:
-            GET (macAddr48 + some INCORRECT additional params) -> 204 No Content
+            GET (macAddr48 + some RIGHT additional params**) -> 200 OK, JSON in responce
         case 7:
-            GET (ipv4, but in data layer has not one info) -> 400 Bad Request (multiple binding info found, (see pt 5.7 in 3GPP docs))
+            GET (macAddr48 + some INCORRECT additional params) -> 204 No Content
+        case 8:
+            GET (UE (ipv4) incorrect) -> 404 Not Found
+        case 9:
+            GET (UE (macAddr) incorrect) -> 404 Not Found
     - DELETE
         case 1:
             valid DELETE -> 204 No Content
@@ -93,4 +97,3 @@ ex body pcf ue post: {
 * UE - its ipv4Addr, or macAddr48, or ipv6Adrr, but last (ipv6) not supported yet, and so UE is ipv4 and mac
 
 ** additional params for GET PCF binding is: supi (or gpsi) (only one at one time, not both), dnn (optionally snssai (sst and sd) (if dnn exist)
-

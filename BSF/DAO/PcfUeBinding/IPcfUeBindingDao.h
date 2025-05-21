@@ -1,7 +1,7 @@
 #pragma once
 #include <optional>
-#include "../../../gen/model/PcfBinding.h"
-#include "../../../gen/model/PcfForUeBinding.h"
+#include "../../../gen/nbsf-management/model/PcfBinding.h"
+#include "../../../gen/nbsf-management/model/PcfForUeBinding.h"
 
 class IPcfUeBindingDao {
 public:

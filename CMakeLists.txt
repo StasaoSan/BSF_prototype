@@ -11,12 +11,17 @@ add_subdirectory(${USERVER_ROOT} ${CMAKE_BINARY_DIR}/userver-build)
 
 find_package(nlohmann_json REQUIRED)
 
-file(GLOB_RECURSE GENERATED_SOURCES CONFIGURE_DEPENDS
-        "${CMAKE_SOURCE_DIR}/gen/model/*.cpp")
+file(GLOB_RECURSE GENERATED_SOURCES_NBSF CONFIGURE_DEPENDS
+#        "${CMAKE_SOURCE_DIR}/gen/model/*.cpp")
+        "${CMAKE_SOURCE_DIR}/gen/nbsf-management/model/*.cpp")
+
+file(GLOB_RECURSE GENERATED_SOURCES_NRF CONFIGURE_DEPENDS
+        "${CMAKE_SOURCE_DIR}/gen/nrf-nfm/model/*.cpp")
 
 add_executable(BSF2
         main.cpp
-        ${GENERATED_SOURCES}
+        ${GENERATED_SOURCES_NBSF}
+        ${GENERATED_SOURCES_NRF}
         UUID/IUuidGenerator.h
         UUID/UuidGenerator.cpp
         UUID/UuidGenerator.h
@@ -53,6 +58,7 @@ add_executable(BSF2
         BSF/Registration/BsfRegistrationComponent.h
         BSF/Registration/BsfRegistrationComponent.cpp
         BSF/Registration/BsfRegistrationComponent.cpp
+        config.h
 )
 
 target_link_libraries(BSF2

@@ -2,7 +2,7 @@
 #include <cstdint>
 #include <optional>
 
-#include "../../../gen/model/PcfBinding.h"
+#include "../../../gen/nbsf-management/model/PcfBinding.h"
 
 class IPcfBindingService {
 public:

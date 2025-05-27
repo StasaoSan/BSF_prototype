@@ -4,24 +4,29 @@ project(bsf_prototype LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-list(PREPEND CMAKE_PREFIX_PATH "/opt/homebrew")
-
 set(USERVER_ROOT "${CMAKE_SOURCE_DIR}/userver")
 add_subdirectory(${USERVER_ROOT} ${CMAKE_BINARY_DIR}/userver-build)
 
 find_package(nlohmann_json REQUIRED)
 
 file(GLOB_RECURSE GENERATED_SOURCES_NBSF CONFIGURE_DEPENDS
-#        "${CMAKE_SOURCE_DIR}/gen/model/*.cpp")
         "${CMAKE_SOURCE_DIR}/gen/nbsf-management/model/*.cpp")
 
+file(GLOB_RECURSE GENERATED_SOURCES_NRF_H CONFIGURE_DEPENDS
+        "${CMAKE_SOURCE_DIR}/gen/nrf-nfm-restsdk/include/CppRestOpenAPIClient/model/*.h"
+        "${CMAKE_SOURCE_DIR}/gen/nrf-nfm-restsdk/include/CppRestOpenAPIClient/*.h")
+
 file(GLOB_RECURSE GENERATED_SOURCES_NRF CONFIGURE_DEPENDS
-        "${CMAKE_SOURCE_DIR}/gen/nrf-nfm/model/*.cpp")
+        "${CMAKE_SOURCE_DIR}/gen/nrf-nfm-restsdk/src/model/*.cpp"
+        "${CMAKE_SOURCE_DIR}/gen/nrf-nfm-restsdk/src/*.cpp")
+
+include_directories(${CMAKE_SOURCE_DIR})
 
 add_executable(BSF2
         main.cpp
         ${GENERATED_SOURCES_NBSF}
         ${GENERATED_SOURCES_NRF}
+        ${GENERATED_SOURCES_NRF_H}
         UUID/IUuidGenerator.h
         UUID/UuidGenerator.cpp
         UUID/UuidGenerator.h
@@ -57,13 +62,23 @@ add_executable(BSF2
         BSF/Handler/PcfUeBinding/Post/PcfUeBindingPostHandler.cpp
         BSF/Registration/BsfRegistrationComponent.h
         BSF/Registration/BsfRegistrationComponent.cpp
-        BSF/Registration/BsfRegistrationComponent.cpp
-        config.h
+        BSF/Registration/NrfApiWrapper.cpp
+)
+
+set(NRF_MODELBASE_WRAPPER "${CMAKE_SOURCE_DIR}/BSF/Registration/NrfApiWrapper.cpp")
+
+target_compile_options(BSF2 PRIVATE
+        "-include${NRF_MODELBASE_WRAPPER}"
+)
+
+target_include_directories(BSF2 PRIVATE
+        ${CMAKE_SOURCE_DIR}
+        "${CMAKE_SOURCE_DIR}/gen/nrf-nfm-restsdk/include"
 )
 
 target_link_libraries(BSF2
         PRIVATE
-        userver-core
+        userver::core
         nlohmann_json::nlohmann_json
 )
 

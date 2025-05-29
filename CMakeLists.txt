@@ -12,13 +12,13 @@ find_package(nlohmann_json REQUIRED)
 file(GLOB_RECURSE GENERATED_SOURCES_NBSF CONFIGURE_DEPENDS
         "${CMAKE_SOURCE_DIR}/gen/nbsf-management/model/*.cpp")
 
-file(GLOB_RECURSE GENERATED_SOURCES_NRF_H CONFIGURE_DEPENDS
-        "${CMAKE_SOURCE_DIR}/gen/nrf-nfm-restsdk/include/CppRestOpenAPIClient/model/*.h"
-        "${CMAKE_SOURCE_DIR}/gen/nrf-nfm-restsdk/include/CppRestOpenAPIClient/*.h")
-
-file(GLOB_RECURSE GENERATED_SOURCES_NRF CONFIGURE_DEPENDS
-        "${CMAKE_SOURCE_DIR}/gen/nrf-nfm-restsdk/src/model/*.cpp"
-        "${CMAKE_SOURCE_DIR}/gen/nrf-nfm-restsdk/src/*.cpp")
+#file(GLOB_RECURSE GENERATED_SOURCES_NRF_H CONFIGURE_DEPENDS
+#        "${CMAKE_SOURCE_DIR}/gen/nrf-nfm-restsdk/include/CppRestOpenAPIClient/model/*.h"
+#        "${CMAKE_SOURCE_DIR}/gen/nrf-nfm-restsdk/include/CppRestOpenAPIClient/*.h")
+#
+#file(GLOB_RECURSE GENERATED_SOURCES_NRF CONFIGURE_DEPENDS
+#        "${CMAKE_SOURCE_DIR}/gen/nrf-nfm-restsdk/src/model/*.cpp"
+#        "${CMAKE_SOURCE_DIR}/gen/nrf-nfm-restsdk/src/*.cpp")
 
 include_directories(${CMAKE_SOURCE_DIR})
 
@@ -60,20 +60,22 @@ add_executable(BSF2
         BSF/Handler/PcfUeBinding/Get/PcfUeBindingGetHandler.cpp
         BSF/Handler/PcfUeBinding/Post/PcfUeBindingPostHandler.h
         BSF/Handler/PcfUeBinding/Post/PcfUeBindingPostHandler.cpp
+#        BSF/Registration/UseAutogenFiles/BsfRegistrationComponent.h
+#        BSF/Registration/UseAutogenFiles/BsfRegistrationComponent.cpp
+#        BSF/Registration/UseAutogenFiles/NrfApiWrapper.cpp
         BSF/Registration/BsfRegistrationComponent.h
         BSF/Registration/BsfRegistrationComponent.cpp
-        BSF/Registration/NrfApiWrapper.cpp
 )
 
-set(NRF_MODELBASE_WRAPPER "${CMAKE_SOURCE_DIR}/BSF/Registration/NrfApiWrapper.cpp")
+#set(NRF_MODELBASE_WRAPPER "${CMAKE_SOURCE_DIR}/BSF/Registration/NrfApiWrapper.cpp")
 
-target_compile_options(BSF2 PRIVATE
-        "-include${NRF_MODELBASE_WRAPPER}"
-)
+#target_compile_options(BSF2 PRIVATE
+#        "-include${NRF_MODELBASE_WRAPPER}"
+#)
 
 target_include_directories(BSF2 PRIVATE
         ${CMAKE_SOURCE_DIR}
-        "${CMAKE_SOURCE_DIR}/gen/nrf-nfm-restsdk/include"
+#        "${CMAKE_SOURCE_DIR}/gen/nrf-nfm-restsdk/include"
 )
 
 target_link_libraries(BSF2

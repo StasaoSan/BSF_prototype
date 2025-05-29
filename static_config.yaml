@@ -4,55 +4,54 @@ components_manager:
       worker_threads: 4
     fs-task-processor:
       worker_threads: 1
-
   default_task_processor: main-task-processor
-
   components:
+#   PCF CONFIG
     logging:
       fs-task-processor: fs-task-processor
       loggers:
         default:
-          file_path: '@stdout'
+          file_path: "@stdout"
           level: info
           overflow_behavior: discard
-
     tracer:
       service-name: bsf_prototype
-
     server:
       listener:
         address: 0.0.0.0
         port: 8080
         task_processor: main-task-processor
-
     pcf-binding-service: {}
     pcf-binding-post:
       path: /nbsf-management/v1/pcfBindings
       method: POST
       task_processor: main-task-processor
-
     pcf-binding-get:
       path: /nbsf-management/v1/pcfBindings
       method: GET
       task_processor: main-task-processor
-
     pcf-binding-delete:
       path: /nbsf-management/v1/pcfBindings/{bindingId}
       method: DELETE
       task_processor: main-task-processor
-
     pcf-ue-binding-service: {}
     pcf-ue-binding-post:
       path: /nbsf-management/v1/pcf-ue-bindings
       method: POST
       task_processor: main-task-processor
-
     pcf-ue-binding-get:
       path: /nbsf-management/v1/pcf-ue-bindings
       method: GET
       task_processor: main-task-processor
-
     pcf-ue-binding-delete:
       path: /nbsf-management/v1/pcf-ue-bindings/{bindingId}
       method: DELETE
       task_processor: main-task-processor
+#   BSF REGISTER CONFIG
+    http-client:
+      fs-task-processor: "fs-task-processor"
+    dns-client:
+      fs-task-processor: "fs-task-processor"
+    bsf-reg:
+      nrf-address: 172.22.0.10:8080
+      ipv4: 172.22.0.29

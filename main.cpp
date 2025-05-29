@@ -1,7 +1,4 @@
 #include <fstream>
-#include <iostream>
-#include <string_view>
-#include <userver/utest/using_namespace_userver.hpp>
 #include <userver/server/handlers/http_handler_base.hpp>
 #include <userver/components/minimal_server_component_list.hpp>
 #include <userver/utils/daemon_run.hpp>
@@ -16,12 +13,15 @@
 #include "BSF/Service/PcfBinding/PcfBindingServiceComponent.h"
 #include "userver/logging/component.hpp"
 #include "userver/server/component.hpp"
-#include "userver/tracing/component.hpp"
 #include "BSF/Service/PcfUeBinding/PcfUeBindingServiceComponent.h"
 #include "BSF/Handler/PcfUeBinding/PcfUeBindingBaseHandler.h"
 #include "BSF/Handler/PcfUeBinding/Delete/PcfUeBindingDeleteHandler.h"
 #include "BSF/Handler/PcfUeBinding/Get/PcfUeBindingGetHandler.h"
 #include "BSF/Handler/PcfUeBinding/Post/PcfUeBindingPostHandler.h"
+#include "BSF/Registration/BsfRegistrationComponent.h"
+#include "userver/clients/http/component.hpp"
+#include "userver/components/component_list.hpp"
+#include "userver/clients/dns/component.hpp"
 
 int main(int argc, char* argv[]) {
     auto component_list = userver::components::MinimalServerComponentList();
@@ -34,7 +34,9 @@ int main(int argc, char* argv[]) {
     component_list.Append<PcfUeBindingPostHandler>();
     component_list.Append<PcfUeBindingGetHandler>();
     component_list.Append<PcfUeBindingDeleteHandler>();
-
+    component_list.Append<BsfRegistrationComponent>();
+    component_list.Append<userver::components::HttpClient>();
+    component_list.Append<userver::clients::dns::Component>();
     auto dao = std::make_shared<InMemoryPcfBindingDao>(std::make_unique<UuidGenerator>());
     auto service = std::make_shared<PcfBindingService>(dao);
 

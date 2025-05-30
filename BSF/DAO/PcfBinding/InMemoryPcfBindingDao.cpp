@@ -1,7 +1,7 @@
 #include <string>
 #include <iostream>
 #include "InMemoryPcfBindingDao.h"
-#include "../../../gen/nbsf-management/model/PcfBinding.h"
+#include "gen/nbsf-management/model/PcfBinding.h"
 
 std::uint64_t InMemoryPcfBindingDao::Register(org::openapitools::server::model::PcfBinding binding) {
     const auto uuid = uuidGenerator->Generate();

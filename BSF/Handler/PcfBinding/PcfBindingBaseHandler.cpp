@@ -1,8 +1,8 @@
 #include "PcfBindingBaseHandler.h"
-#include "../../../gen/nbsf-management/model/PcfBinding.h"
+#include "gen/nbsf-management/model/PcfBinding.h"
 #include "userver/components/component_context.hpp"
-#include "../../Service/PcfBinding/IPcfBindingService.h"
-#include "../../Service/PcfBinding/PcfBindingServiceComponent.h"
+#include "BSF/Service/PcfBinding/IPcfBindingService.h"
+#include "BSF/Service/PcfBinding/PcfBindingServiceComponent.h"
 
 PcfBindingBaseHandler::PcfBindingBaseHandler(
         const userver::components::ComponentConfig& config,

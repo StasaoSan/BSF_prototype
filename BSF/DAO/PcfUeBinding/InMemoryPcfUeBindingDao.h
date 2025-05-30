@@ -1,7 +1,7 @@
 #pragma once
 #include "IPcfUeBindingDao.h"
-#include "../../../UUID/IUuidGenerator.h"
-#include "../../../gen/nbsf-management/model/PcfForUeBinding.h"
+#include "UUID/IUuidGenerator.h"
+#include "gen/nbsf-management/model/PcfForUeBinding.h"
 
 class InMemoryPcfUeBindingDao : public IPcfUeBindingDao {
 public:

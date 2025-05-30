@@ -1,5 +1,5 @@
 #pragma once
-#include "../../../gen/nbsf-management/model/PcfBinding.h"
+#include "gen/nbsf-management/model/PcfBinding.h"
 #include <optional>
 class IPcfBindingDao {
 public:

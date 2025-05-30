@@ -2,10 +2,10 @@
 // Created by Тихонов Александр on 10.05.2025.
 //
 #include "PcfUeBindingDeleteHandler.h"
-#include "../PcfUeBindingBaseHandler.h"
+#include "BSF/Handler/PcfUeBinding/PcfUeBindingBaseHandler.h"
 #include "userver/components/component_context.hpp"
-#include "../../../Service/PcfUeBinding/IPcfUeBindingService.h"
-#include "../../../Service/PcfUeBinding/PcfUeBindingServiceComponent.h"
+#include "BSF/Service/PcfUeBinding/IPcfUeBindingService.h"
+#include "BSF/Service/PcfUeBinding/PcfUeBindingServiceComponent.h"
 
 std::string PcfUeBindingDeleteHandler::HandleRequestThrow(
     const userver::server::http::HttpRequest &request,

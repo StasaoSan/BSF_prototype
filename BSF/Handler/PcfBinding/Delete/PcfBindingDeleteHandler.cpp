@@ -1,9 +1,9 @@
 #include <iostream>
 #include "PcfBindingDeleteHandler.h"
-#include "../../../gen/nbsf-management/model/PcfBinding.h"
+#include "gen/nbsf-management/model/PcfBinding.h"
 #include "userver/components/component_context.hpp"
-#include "../../../Service/PcfBinding/IPcfBindingService.h"
-#include "../../../Service/PcfBinding/PcfBindingServiceComponent.h"
+#include "BSF/Service/PcfBinding/IPcfBindingService.h"
+#include "BSF/Service/PcfBinding/PcfBindingServiceComponent.h"
 
 std::string PcfBindingDeleteHandler::HandleRequestThrow( const userver::server::http::HttpRequest& request,
         userver::server::request::RequestContext&) const {

@@ -1,7 +1,7 @@
 #include "PcfUeBindingPostHandler.h"
-#include "../PcfUeBindingBaseHandler.h"
-#include "../../../Service/PcfUeBinding/IPcfUeBindingService.h"
-#include "../../../Service/PcfUeBinding/PcfUeBindingServiceComponent.h"
+#include "BSF/Handler/PcfUeBinding/PcfUeBindingBaseHandler.h"
+#include "BSF/Service/PcfUeBinding/IPcfUeBindingService.h"
+#include "BSF/Service/PcfUeBinding/PcfUeBindingServiceComponent.h"
 
 #include "userver/components/component_context.hpp"
 

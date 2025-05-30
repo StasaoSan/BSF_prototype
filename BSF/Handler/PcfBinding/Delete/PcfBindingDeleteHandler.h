@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../PcfBindingBaseHandler.h"
+#include "BSF/Handler/PcfBinding/PcfBindingBaseHandler.h"
 
 class PcfBindingDeleteHandler final : public PcfBindingBaseHandler {
 public:

@@ -1,5 +1,5 @@
 #pragma once
-#include "../PcfBindingBaseHandler.h"
+#include "BSF/Handler/PcfBinding/PcfBindingBaseHandler.h"
 
 class PcfBindingPostHandler final : public PcfBindingBaseHandler {
 public:

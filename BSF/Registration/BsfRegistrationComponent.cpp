@@ -34,7 +34,7 @@ BsfRegistrationComponent::BsfRegistrationComponent(
     const std::string nrf = cfg["nrf-address"].As<std::string>("");
 
     if (scp.empty() && nrf.empty()) {
-        LOG_INFO() << "NRF/SCP address not set – registration skipped";
+        std::cout << "NRF/SCP address not set – registration skipped" << std::endl;
         return;
     }
 
@@ -93,7 +93,7 @@ void BsfRegistrationComponent::Register()
         if (code != userver::clients::http::Status::OK && code != userver::clients::http::Status::Created)
             throw std::runtime_error("BSF registration failed: HTTP " + std::to_string(code));
         m_registered = true;
-        std::cout << "BSF registered at " << url << " (HTTP " << code << ")";
+        std::cout << "BSF registered at " << url << " (HTTP " << code << ")"  << std::endl;;
     } catch (const std::exception &e) {
         std::cerr << "BSF registration failed: "  << e.what() << std::endl;
     }

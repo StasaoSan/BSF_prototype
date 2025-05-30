@@ -53,5 +53,6 @@ components_manager:
     dns-client:
       fs-task-processor: "fs-task-processor"
     bsf-reg:
-      nrf-address: 172.22.0.10:8080
-      ipv4: 172.22.0.29
+      nrf-address: 127.0.0.1:7777   # where to do PUT request
+      ipv4: 127.0.0.1               # BSF IP to others (PCF)
+
